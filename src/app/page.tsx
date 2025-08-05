@@ -3,7 +3,6 @@ import { Metadata } from 'next'
 import {
   Header,
   Footer,
-  Animations,
   Hero,
   About,
   Services,
@@ -124,7 +123,6 @@ export default function Home() {
         <Contact />
         <Footer />
       </main>
-      <Animations />
     </>
   )
 }

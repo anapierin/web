@@ -9,34 +9,53 @@ import {
   DAGOSTINI_ADDRESS,
   DAGOSTINI_PHONE,
   PHONE_NUMBER,
+  CRM_PR_NUMBER,
+  RQE_NUMBER,
 } from '@/lib/constants'
 
 export default function Footer() {
   return (
     <footer className="section bg-neutral-900 text-neutral-100">
       <div className="container">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
-          <div className="md:col-span-2 space-y-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-16">
+          <div className="md:col-span-2">
             <div className="py-2">
               <h3 className="text-2xl font-bold mb-6 text-brand-400">{NAME}</h3>
             </div>
             <div className="py-2">
-              <p className="text-neutral-300 leading-relaxed text-base mb-8">
+              <p className="text-neutral-300 leading-relaxed text-base mb-6">
                 {PROFESSIONAL_DESCRIPTION}
               </p>
+              
+              {/* Professional Credentials */}
+              <div className="flex flex-wrap items-center gap-4 mb-6">
+                <div className="flex items-center gap-2 px-3 py-2 bg-neutral-800 rounded-full border border-neutral-700">
+                  <svg className="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="text-brand-400 font-medium text-sm">CRM/PR {CRM_PR_NUMBER}</span>
+                </div>
+                <div className="w-1 h-1 bg-neutral-600 rounded-full"></div>
+                <div className="flex items-center gap-2 px-3 py-2 bg-neutral-800 rounded-full border border-neutral-700">
+                  <svg className="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="text-brand-400 font-medium text-sm">RQE {RQE_NUMBER}</span>
+                </div>
+              </div>
             </div>
 
             {/* Social Media */}
             <div className="py-4">
-              <h4 className="text-lg font-semibold mb-6 text-neutral-200">
+              <h4 className="text-lg font-semibold text-neutral-200">
                 Siga-nos
               </h4>
-              <div className="flex space-x-6">
+              <div className="flex mt-1">
                 <Link
                   href="https://instagram.com/draanapierin"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 px-4 w-32 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105 shadow-medium"
+                  className="flex items-center justify-center gap-2 px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105 shadow-medium"
                 >
                   <svg
                     className="w-5 h-5"
@@ -51,13 +70,13 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="space-y-8">
+          <div>
             <div className="py-2">
               <h4 className="text-lg font-semibold mb-6 text-neutral-200">
                 Locais de Atendimento
               </h4>
             </div>
-            <div className="space-y-8 text-neutral-300">
+            <div className="text-neutral-300">
               <div className="py-2">
                 <div className="font-medium text-neutral-200 mb-3">
                   {ORTOHAUER_NAME}
@@ -87,7 +106,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="space-y-8">
+          <div>
             <div className="py-2">
               <h4 className="text-lg font-semibold mb-6 text-neutral-200">
                 Tratamentos
@@ -110,7 +129,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-neutral-700 pt-12">
+        <div className="border-t border-neutral-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-neutral-400 text-sm py-2">
               © 2025 Dra. Ana Pierin. Todos os direitos reservados.

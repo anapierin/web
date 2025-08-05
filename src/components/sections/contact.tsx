@@ -15,21 +15,22 @@ export default function Contact() {
   return (
     <section id="contact" className="section">
       <div className="container">
-        <div className="text-center mb-20 fade-in">
-          <h2 className="heading-lg text-text-primary mb-8">
+        <div className="text-center mb-16 fade-in">
+          <h2 className="heading-lg text-text-primary mb-6">
             Local e Agendamento
           </h2>
-          <div className="w-20 h-1 bg-brand-600 mx-auto mb-8"></div>
+          <div className="w-20 h-1 bg-brand-600 mx-auto mb-6"></div>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
             Entre em contato para agendar sua consulta
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          <div className="space-y-12 fade-in ">
+        <div className="grid lg:grid-cols-2 gap-12">
+          <div className="space-y-8 fade-in">
             <div className="card space-y-8 p-8">
               <div className="flex items-start space-x-8">
                 <div className="w-24 h-24 bg-brand-600 rounded-3xl flex items-center justify-center text-white flex-shrink-0 shadow-large">
+                  {/* FIXME: Icon colors are not being applied */}
                   <svg
                     className="w-12 h-12"
                     fill="none"
@@ -163,7 +164,7 @@ export default function Contact() {
               <div className="text-center space-y-8">
                 <div className="w-24 h-24 bg-success-500 rounded-full flex items-center justify-center mx-auto shadow-medium">
                   <svg
-                    className="w-12 h-12 text-white"
+                    className="w-12 h-12 text-black"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

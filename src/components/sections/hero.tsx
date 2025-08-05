@@ -4,9 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {
   NAME,
-  ORTHOPEDIST_TITLE,
-  CRM_PR_NUMBER,
-  RQE_NUMBER,
   EXPERIENCE_YEARS,
   PATIENTS_TREATED,
   LOCATIONS_COUNT,
@@ -24,7 +21,7 @@ export default function Hero() {
       <div className="container">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center min-h-[85vh]">
           {/* Content */}
-          <div className="lg:col-span-7 space-y-16 fade-in">
+          <div className="lg:col-span-7 space-y-12 fade-in">
             {/* Badge */}
             <div className="inline-flex">
               <div className="badge">
@@ -44,86 +41,36 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <div className="space-y-12">
-              <div className="space-y-10">
-                <div className="py-4">
-                  <h1 className="heading-xl text-balance mb-6">
-                    <span className="text-text-primary">Dra. </span>
-                    <span className="text-brand-600">
-                      {NAME.replace('Dra. ', '')}
-                    </span>
-                  </h1>
-                </div>
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h1 className="heading-xl text-balance">
+                  <span className="text-text-primary">Dra. </span>
+                  <span className="text-brand-600">
+                    {NAME.replace('Dra. ', '')}
+                  </span>
+                </h1>
 
-                <div className="space-y-8">
-                  <div className="py-2">
-                    <h2 className="text-2xl lg:text-3xl xl:text-4xl font-display font-semibold text-text-secondary mb-6">
-                      {ORTHOPEDIST_TITLE}
-                    </h2>
-                  </div>
-
-                  <div className="flex flex-wrap items-center gap-6 text-text-muted py-3">
-                    <div className="flex items-center gap-3 px-3 py-2 bg-brand-50 rounded-full">
-                      <svg
-                        className="w-4 h-4 text-brand-600"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      <span className="font-medium text-text-primary">
-                        CRM/PR {CRM_PR_NUMBER}
-                      </span>
-                    </div>
-                    <div className="w-2 h-2 bg-brand-300 rounded-full"></div>
-                    <div className="flex items-center gap-3 px-3 py-2 bg-brand-50 rounded-full">
-                      <svg
-                        className="w-4 h-4 text-brand-600"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      <span className="font-medium text-text-primary">
-                        RQE {RQE_NUMBER}
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                <h2 className="text-2xl lg:text-3xl xl:text-4xl font-display font-semibold text-text-secondary">
+                  Médica Ortopedista, com foco em Ortopedia Esportiva e dor e prescritora de Cannabis Medicinal
+                </h2>
               </div>
 
-              <div className="space-y-10 max-w-2xl">
-                <div className="py-4">
-                  <p className="text-lg leading-relaxed text-text-primary font-medium mb-6">
-                    Especialista em Ortopedia e Traumatologia oferecendo
-                    tratamentos minimamente invasivos para o tratamento da dor.
-                  </p>
-                </div>
+              <div className="space-y-6 max-w-2xl">
+                <p className="text-lg leading-relaxed text-text-primary font-medium">
+                  Especialista em Ortopedia e Traumatologia oferecendo
+                  tratamentos minimamente invasivos para o tratamento da dor.
+                </p>
 
-                <div className="py-2">
-                  <p className="text-body">
-                    Cuidado especializado com excelência técnica, empatia e
-                    acolhimento para melhorar sua qualidade de vida. Atendimento
-                    humanizado e personalizado.
-                  </p>
-                </div>
+                <p className="text-body">
+                  Cuidado especializado com excelência técnica, empatia e
+                  acolhimento para melhorar sua qualidade de vida. Atendimento
+                  humanizado e personalizado.
+                </p>
               </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-5 pt-6">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
                 href="#contact"
                 className="btn-primary group whitespace-nowrap flex gap-x-2 justify-center items-center"

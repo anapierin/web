@@ -43,18 +43,18 @@ export default function Testimonials() {
   return (
     <section className="section bg-neutral-50">
       <div className="container">
-        <div className="text-center mb-20 fade-in">
-          <h2 className="heading-lg text-text-primary mb-8">
+        <div className="text-center mb-16 fade-in">
+          <h2 className="heading-lg text-text-primary mb-6">
             Opiniões de quem já passou por aqui
           </h2>
-          <div className="w-20 h-1 bg-brand-600 mx-auto mb-8"></div>
+          <div className="w-20 h-1 bg-brand-600 mx-auto mb-6"></div>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
             Veja o que nossos pacientes falam sobre o atendimento e tratamento
             recebidos.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="card fade-in space-y-6">
               <div className="flex items-center">
@@ -68,8 +68,8 @@ export default function Testimonials() {
               </blockquote>
 
               <div className="flex items-center space-x-4 pt-2">
-                <div className="w-14 h-14 bg-brand-600 rounded-full flex items-center justify-center shadow-medium">
-                  <span className="text-white font-semibold text-lg">
+                <div className="w-14 h-14 bg-brand-600 rounded-full flex items-center justify-center shadow-medium border-2 border-black">
+                  <span className="text-black font-semibold text-lg">
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>

@@ -1,11 +1,12 @@
 import Link from 'next/link'
 
 export default function Services() {
+  // FIXME: Icon colors are not being applied
   const services = [
     {
       icon: (
         <svg
-          className="w-8 h-8"
+          className="w-8 h-8 text-primary"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -95,11 +96,11 @@ export default function Services() {
   return (
     <section id="services" className="section">
       <div className="container">
-        <div className="text-center mb-20 fade-in">
-          <h2 className="heading-lg text-text-primary mb-8">
+        <div className="text-center mb-16 fade-in">
+          <h2 className="heading-lg text-text-primary mb-6">
             Tratamentos Especializados
           </h2>
-          <div className="w-20 h-1 bg-brand-600 mx-auto mb-8"></div>
+          <div className="w-20 h-1 bg-brand-600 mx-auto mb-6"></div>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
             Todos os tratamentos são realizados com equipamentos modernos,
             priorizando sua segurança, conforto e os melhores resultados
@@ -107,12 +108,12 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 mb-20">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
             <div key={index} className="card fade-in group">
               <div className="flex items-start space-x-6">
                 <div className="w-20 h-20 bg-brand-600 rounded-2xl flex items-center justify-center text-white group-hover:bg-brand-500 transition-colors duration-300 flex-shrink-0 shadow-medium">
-                  <div className="w-10 h-10">{service.icon}</div>
+                  <div className="w-10 h-10 text-primary">{service.icon}</div>
                 </div>
                 <div className="flex-1 space-y-4">
                   <h3 className="heading-sm text-text-primary group-hover:text-brand-600 transition-colors duration-300">

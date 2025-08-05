@@ -4,17 +4,27 @@ export default function About() {
   return (
     <section id="about" className="py-20 lg:py-32 bg-neutral-50">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-24 lg:gap-32 items-center">
+        {/* Section Title - Centered, Full Width */}
+        <div className="text-center mb-16 lg:mb-20 fade-in">
+          <h2 className="heading-lg text-text-primary leading-tight mb-6">
+            Quem é a Dra Ana Pierin?
+          </h2>
+          <div className="w-24 h-1.5 bg-brand-600 mx-auto"></div>
+        </div>
+
+        {/* Image and Credentials Grid */}
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center mb-20 lg:mb-24">
           {/* Image */}
           <div className="relative fade-in order-2 lg:order-1">
-            <div className="relative w-full aspect-[3/4] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative w-full aspect-[3/4] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl group">
               <Image
                 src="/shared/ana-01.JPEG"
                 alt="Dra. Ana Pierin - Ortopedista e Traumatologista"
                 fill
-                className="object-cover object-center"
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
 
             {/* Decorative elements */}
@@ -23,141 +33,196 @@ export default function About() {
           </div>
 
           {/* Content */}
-          <div className="space-y-16 fade-in order-1 lg:order-2">
-            <div className="space-y-8">
-              <h2 className="heading-lg text-text-primary leading-tight">
-                Quem é a Dra Ana Pierin?
-              </h2>
-              <div className="w-24 h-1.5 bg-brand-600"></div>
-            </div>
-
-            <div className="space-y-12">
-              {/* Credentials */}
-              <div className="space-y-8">
-                <div className="grid gap-6">
-                  <div className="bg-white rounded-2xl p-8 border-l-4 border-brand-600 shadow-medium">
-                    <h3 className="heading-sm text-text-primary mb-3">
+          <div className="space-y-10 fade-in order-1 lg:order-2">
+            {/* Credentials */}
+            <div className="space-y-6">
+              <div className="grid gap-8">
+                <div className="group bg-gradient-to-br from-white to-brand-50/30 rounded-3xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-[1.02] border border-brand-100/50">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-2xl bg-brand-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="heading-sm text-text-primary">
                       Graduação em Medicina
                     </h3>
-                    <p className="text-body">PUCPR (2018)</p>
                   </div>
+                  <p className="text-lg text-brand-700 font-medium ml-16">
+                    PUCPR (2018)
+                  </p>
+                </div>
 
-                  <div className="bg-white rounded-2xl p-8 border-l-4 border-brand-500 shadow-medium">
-                    <h3 className="heading-sm text-text-primary mb-3">
+                <div className="group bg-gradient-to-br from-white to-brand-50/30 rounded-3xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-[1.02] border border-brand-100/50">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-2xl bg-brand-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="heading-sm text-text-primary">
                       Residência em Ortopedia e Traumatologia
                     </h3>
-                    <p className="text-body">
-                      Santa Casa de Curitiba (2021-2024)
-                    </p>
                   </div>
+                  <p className="text-lg text-brand-700 font-medium ml-16">
+                    Santa Casa de Curitiba (2021-2024)
+                  </p>
+                </div>
 
-                  <div className="bg-white rounded-2xl p-8 border-l-4 border-success-500 shadow-medium">
-                    <h3 className="heading-sm text-text-primary mb-3">
+                <div className="group bg-gradient-to-br from-white to-success-50/30 rounded-3xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-[1.02] border border-success-100/50">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 rounded-2xl bg-success-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="heading-sm text-text-primary">
                       Especializações
                     </h3>
-                    <div className="space-y-3 text-body">
-                      <p>
-                        • Pós Graduação em Nutrologia - USP Ribeirão Preto
+                  </div>
+                  <div className="space-y-4 ml-16">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-success-500 mt-3 flex-shrink-0"></div>
+                      <p className="text-lg text-success-700 font-medium">
+                        Pós Graduação em Nutrologia - USP Ribeirão Preto
                         (2020-2021)
                       </p>
-                      <p>
-                        • Pós Graduação em Medicina Esportiva - Uniguaçu
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-success-500 mt-3 flex-shrink-0"></div>
+                      <p className="text-lg text-success-700 font-medium">
+                        Pós Graduação em Medicina Esportiva - Uniguaçu
                         (2022-2023)
                       </p>
-                      <p>
-                        • Pós Graduação em Medicina Regenerativa - Cetrus SP
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-success-500 mt-3 flex-shrink-0"></div>
+                      <p className="text-lg text-success-700 font-medium">
+                        Pós Graduação em Medicina Regenerativa - Cetrus SP
                         (2025)
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
 
-              {/* Quote */}
-              <blockquote className="bg-brand-50 border-l-6 border-brand-600 pl-10 py-10 rounded-r-2xl shadow-soft">
-                <p className="text-lg lg:text-xl italic text-text-primary leading-relaxed font-medium">
-                  &quot;Acredito que todo paciente merece um cuidado integral no
-                  seu atendimento, que deve ser feito a partir de uma escuta
-                  atenciosa e detalhada, e com foco no bem estar geral. Para
-                  isso utilizo técnicas avançadas no tratamento da dor e de
-                  doenças inflamatórias ortopédicas.&quot;
-                </p>
-              </blockquote>
+        {/* Quote */}
+        <blockquote className="bg-brand-50 border-l-6 border-brand-600 pl-10 py-10 rounded-r-2xl shadow-soft">
+          <p className="text-lg lg:text-xl italic text-text-primary leading-relaxed font-medium">
+            &quot;Acredito que todo paciente merece um cuidado integral no seu
+            atendimento, que deve ser feito a partir de uma escuta atenciosa e
+            detalhada, e com foco no bem estar geral. Para isso utilizo técnicas
+            avançadas no tratamento da dor e de doenças inflamatórias
+            ortopédicas.&quot;
+          </p>
+        </blockquote>
+
+        {/* Three Pillars - Full Width Section */}
+        <div className="fade-in">
+          <div className="grid sm:grid-cols-3 gap-10 pt-12">
+            <div className="text-center group">
+              <div className="w-24 h-24 bg-brand-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-medium">
+                <svg
+                  className="w-12 h-12 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="heading-sm text-text-primary mb-4">
+                Diagnóstico Precoce
+              </h3>
+              <p className="text-body leading-relaxed">
+                Melhores resultados através de avaliação detalhada
+              </p>
             </div>
 
-            {/* Three pillars */}
-            <div className="grid sm:grid-cols-3 gap-10 pt-12">
-              <div className="text-center group">
-                <div className="w-24 h-24 bg-brand-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-medium">
-                  <svg
-                    className="w-12 h-12 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="heading-sm text-text-primary mb-4">
-                  Diagnóstico Precoce
-                </h3>
-                <p className="text-body leading-relaxed">
-                  Melhores resultados através de avaliação detalhada
-                </p>
+            <div className="text-center group">
+              <div className="w-24 h-24 bg-brand-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-medium">
+                <svg
+                  className="w-12 h-12 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
               </div>
+              <h3 className="heading-sm text-text-primary mb-4">
+                Tratamento Preciso
+              </h3>
+              <p className="text-body leading-relaxed">
+                Abordagem especializada e baseada em evidências
+              </p>
+            </div>
 
-              <div className="text-center group">
-                <div className="w-24 h-24 bg-brand-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-medium">
-                  <svg
-                    className="w-12 h-12 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="heading-sm text-text-primary mb-4">
-                  Tratamento Preciso
-                </h3>
-                <p className="text-body leading-relaxed">
-                  Abordagem especializada e baseada em evidências
-                </p>
+            <div className="text-center group">
+              <div className="w-24 h-24 bg-success-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-medium">
+                <svg
+                  className="w-12 h-12 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V13M15 10h-1.586a1 1 0 00-.707.293l-1.414 1.414a1 1 0 00-.293.707V13"
+                  />
+                </svg>
               </div>
-
-              <div className="text-center group">
-                <div className="w-24 h-24 bg-success-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-medium">
-                  <svg
-                    className="w-12 h-12 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V13M15 10h-1.586a1 1 0 00-.707.293l-1.414 1.414a1 1 0 00-.293.707V13"
-                    />
-                  </svg>
-                </div>
-                <h3 className="heading-sm text-text-primary mb-4">
-                  Alívio dos Sintomas
-                </h3>
-                <p className="text-body leading-relaxed">
-                  Retorno ao bem estar e qualidade de vida
-                </p>
-              </div>
+              <h3 className="heading-sm text-text-primary mb-4">
+                Alívio dos Sintomas
+              </h3>
+              <p className="text-body leading-relaxed">
+                Retorno ao bem estar e qualidade de vida
+              </p>
             </div>
           </div>
         </div>
