@@ -207,11 +207,11 @@ export default function Services() {
               ]
 
               const colors = [
-                'brand',
-                'brand-secondary',
-                'success',
-                'brand',
-                'success',
+                'bg-brand-600',
+                'bg-brand-secondary-600',
+                'bg-success-600',
+                'bg-brand-600',
+                'bg-success-600',
               ]
 
               return (
@@ -219,9 +219,7 @@ export default function Services() {
                   key={index}
                   icon={icons[index]}
                   title={condition}
-                  colorScheme={
-                    colors[index] as 'brand' | 'brand-secondary' | 'success'
-                  }
+                  colorClass={colors[index]}
                 />
               )
             })}

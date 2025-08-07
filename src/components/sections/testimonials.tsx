@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { WHATSAPP_DOCTOR_URL } from '@/lib/constants'
 import { TestimonialCard, CTASection } from '@/components/common'
 

@@ -40,7 +40,7 @@ export default function TestimonialCard({
 
       {/* Testimonial Text */}
       <blockquote className="text-text-primary text-lg leading-relaxed italic">
-        "{text}"
+        &ldquo;{text}&rdquo;
       </blockquote>
 
       {/* Author */}
