@@ -19,18 +19,17 @@ export const PROFESSIONAL_DESCRIPTION =
 export const EMAIL_URL = 'mailto:ana.pierin@gmail.com'
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/ana-pierin/'
 export const INSTAGRAM_URL = 'https://www.instagram.com/anapierin.ortopedia/'
-export const FACEBOOK_URL =
-  'https://www.facebook.com/profile.php?id=61557170002194'
+export const FACEBOOK_URL = 'https://www.facebook.com/people/Ana-Pierin-Ortopedia-e-Traumatologia/61557170002194/'
 
-// WhatsApp links for scheduling
+// WhatsApp links
+export const WHATSAPP_DOCTOR_URL = 'https://api.whatsapp.com/send?phone=5541991001372' // Doctor's WhatsApp
+export const WHATSAPP_ORTOHAUER_URL = 'https://api.whatsapp.com/send?phone=5541996767400' // OrtoHauer Clinic
+export const WHATSAPP_DAGOSTINI_URL = 'https://api.whatsapp.com/send?phone=554137730373' // Dagostini Clinic
+
+// Legacy WhatsApp links (keeping for backward compatibility)
 export const WHATSAPP_CANNABIS_URL = 'http://wa.link/5mklj4' // Teleconsulta Cannabis Medicinal
-// 'https://api.whatsapp.com/send?phone=5541991001372'
-
 export const WHATSAPP_CURITIBA_ORTOHAUER_URL = 'http://wa.link/lur15p' // Curitiba – OrtoHauer
-//
-
 export const WHATSAPP_LAPA_DAGOSTINI_URL = 'https://wa.link/biipul' // Lapa – Clínica Dagostini
-//
 
 // Site & Contact Info
 export const SITE_NAME = 'Dra. Ana Pierin'

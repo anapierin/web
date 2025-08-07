@@ -8,23 +8,24 @@ import {
   PATIENTS_TREATED,
   LOCATIONS_COUNT,
 } from '@/lib/constants'
+import { StatCard } from '@/components/common'
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center relative overflow-hidden pt-24 lg:pt-32"
+      className="section min-h-screen flex items-center relative overflow-hidden mt-12 lg:mt-0"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-brand-50 via-white to-brand-100/50 -z-10"></div>
 
       <div className="container">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center min-h-[85vh]">
-          {/* Content */}
-          <div className="lg:col-span-7 space-y-12 fade-in">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-4 md:gap-12 lg:gap-16 lg:items-center min-h-[70vh]">
+          {/* Content - First part (Badge + Headlines) */}
+          <div className="lg:col-span-7 lg:order-1 fade-in">
             {/* Badge */}
-            <div className="inline-flex">
-              <div className="badge">
+            <div className="inline-flex mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-neutral-100 border border-neutral-200 text-neutral-700">
                 <svg
                   className="w-4 h-4 text-success-500"
                   fill="currentColor"
@@ -41,107 +42,23 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h1 className="heading-xl text-balance">
-                  <span className="text-text-primary">Dra. </span>
-                  <span className="text-brand-600">
-                    {NAME.replace('Dra. ', '')}
-                  </span>
-                </h1>
+            <div className="space-y-6 mb-8">
+              <h1 className="heading-xl text-balance">
+                <span className="text-text-primary">Dra. </span>
+                <span className="text-brand-600">
+                  {NAME.replace('Dra. ', '')}
+                </span>
+              </h1>
 
-                <h2 className="text-2xl lg:text-3xl xl:text-4xl font-display font-semibold text-text-secondary">
-                  Médica Ortopedista, com foco em Ortopedia Esportiva e dor e prescritora de Cannabis Medicinal
-                </h2>
-              </div>
-
-              <div className="space-y-6 max-w-2xl">
-                <p className="text-lg leading-relaxed text-text-primary font-medium">
-                  Especialista em Ortopedia e Traumatologia oferecendo
-                  tratamentos minimamente invasivos para o tratamento da dor.
-                </p>
-
-                <p className="text-body">
-                  Cuidado especializado com excelência técnica, empatia e
-                  acolhimento para melhorar sua qualidade de vida. Atendimento
-                  humanizado e personalizado.
-                </p>
-              </div>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link
-                href="#contact"
-                className="btn-primary group whitespace-nowrap flex gap-x-2 justify-center items-center"
-              >
-                <svg
-                  className="w-5 h-5 transition-transform group-hover:scale-110 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                <span>Agendar Consulta</span>
-              </Link>
-              <Link
-                href="#about"
-                className="btn-secondary group whitespace-nowrap flex gap-x-2 justify-center items-center"
-              >
-                <svg
-                  className="w-5 h-5 transition-transform group-hover:scale-110 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                  />
-                </svg>
-                <span>Conheça a Doutora</span>
-              </Link>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-10 pt-12 border-t border-neutral-200">
-              <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-brand-600 mb-3">
-                  {EXPERIENCE_YEARS}
-                </div>
-                <div className="text-sm lg:text-base text-text-muted font-medium leading-snug">
-                  Anos de experiência
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-brand-600 mb-3">
-                  {PATIENTS_TREATED}
-                </div>
-                <div className="text-sm lg:text-base text-text-muted font-medium leading-snug">
-                  Pacientes atendidos
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-brand-600 mb-3">
-                  {LOCATIONS_COUNT}
-                </div>
-                <div className="text-sm lg:text-base text-text-muted font-medium leading-snug">
-                  Locais de atendimento
-                </div>
-              </div>
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-display font-semibold text-text-secondary">
+                Médica Ortopedista, com foco em Ortopedia Esportiva
+                <br />e dor e prescritora de Cannabis Medicinal
+              </h2>
             </div>
           </div>
 
-          {/* Image */}
-          <div className="lg:col-span-5 relative fade-in">
+          {/* Image - Shows after headline on mobile, sidebar on desktop */}
+          <div className="lg:col-span-5 lg:order-2 relative fade-in">
             <div className="relative">
               {/* Main image */}
               <div className="relative w-full aspect-[4/5] rounded-4xl overflow-hidden shadow-large">
@@ -153,47 +70,92 @@ export default function Hero() {
                   priority
                   sizes="(max-width: 1024px) 100vw, 45vw"
                 />
-
-                {/* Overlay card */}
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-medium border border-white/20">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-brand-600 flex items-center justify-center">
-                        <svg
-                          className="w-6 h-6 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <div className="font-semibold text-text-primary">
-                          Dra. Ana Pierin
-                        </div>
-                        <div className="text-sm text-text-muted">
-                          Ortopedista e Traumatologista
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
 
-              {/* Floating elements */}
-              <div className="absolute -top-4 -left-4 w-20 h-20 bg-brand-200 rounded-2xl opacity-60 animate-float -z-10"></div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-300 rounded-full opacity-40 -z-10"></div>
-              <div
-                className="absolute top-1/4 -right-8 w-16 h-16 bg-success-200 rounded-2xl opacity-50 animate-float -z-10"
-                style={{ animationDelay: '2s' }}
-              ></div>
+              {/* Verification Badge - Outside image container */}
+              <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg border-3 border-white z-20">
+                <svg
+                  className="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
             </div>
+
+            {/* Floating elements - Hidden on mobile for cleaner look */}
+            <div className="hidden lg:block absolute -top-4 -left-4 w-20 h-20 bg-brand-200 rounded-2xl opacity-60 animate-float -z-10"></div>
+            <div className="hidden lg:block absolute -bottom-6 -right-6 w-32 h-32 bg-brand-300 rounded-full opacity-40 -z-10"></div>
+            <div
+              className="hidden lg:block absolute top-1/4 -right-8 w-16 h-16 bg-success-200 rounded-2xl opacity-50 animate-float -z-10"
+              style={{ animationDelay: '2s' }}
+            ></div>
+          </div>
+        </div>
+
+        {/* Content - Second part (Description + Buttons + Stats) */}
+        <div className="lg:col-span-7 lg:order-1 space-y-8 fade-in flex flex-col items-center justify-center pt-10 w-full">
+          {/* Stats */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 pt-8 border-t border-neutral-200 w-full">
+            <StatCard value={EXPERIENCE_YEARS} label="Anos de experiência" />
+            <StatCard value={PATIENTS_TREATED} label="Pacientes atendidos" />
+            <StatCard value={LOCATIONS_COUNT} label="Locais de atendimento" />
+          </div>
+
+          {/* Description */}
+          <div className="pt-12 max-w-4xl">
+            <p className="text-xl lg:text-2xl w-full">
+              Cuidado especializado com excelência técnica, empatia e
+              acolhimento para melhorar sua qualidade de vida. Atendimento
+              humanizado e personalizado.
+            </p>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 pt-4 ">
+            <Link
+              href="#contact"
+              className="btn-primary group whitespace-nowrap flex gap-x-2 justify-center items-center"
+            >
+              <svg
+                className="w-5 h-5 transition-transform group-hover:scale-110 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
+              <span>Agendar Consulta</span>
+            </Link>
+            <Link
+              href="#about"
+              className="btn-secondary group whitespace-nowrap flex gap-x-2 justify-center items-center"
+            >
+              <svg
+                className="w-5 h-5 transition-transform group-hover:scale-110 flex-shrink-0 "
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
+              </svg>
+              <span>Conheça a Doutora</span>
+            </Link>
           </div>
         </div>
       </div>

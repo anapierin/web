@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import {
   ORTOHAUER_NAME,
   ORTOHAUER_ADDRESS,
@@ -8,8 +7,11 @@ import {
   DAGOSTINI_ADDRESS,
   DAGOSTINI_PHONE,
   DAGOSTINI_PHONE_NUMBER,
+  WHATSAPP_ORTOHAUER_URL,
+  WHATSAPP_DAGOSTINI_URL,
   EXPERIENCE_YEARS,
 } from '@/lib/constants'
+import { LocationCard, StatCard } from '@/components/common'
 
 export default function Contact() {
   return (
@@ -19,149 +21,39 @@ export default function Contact() {
           <h2 className="heading-lg text-text-primary mb-6">
             Local e Agendamento
           </h2>
-          <div className="w-20 h-1 bg-brand-600 mx-auto mb-6"></div>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
             Entre em contato para agendar sua consulta
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          <div className="space-y-8 fade-in">
-            <div className="card space-y-8 p-8">
-              <div className="flex items-start space-x-8">
-                <div className="w-24 h-24 bg-brand-600 rounded-3xl flex items-center justify-center text-white flex-shrink-0 shadow-large">
-                  {/* FIXME: Icon colors are not being applied */}
-                  <svg
-                    className="w-12 h-12"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                </div>
-                <div className="flex-1 space-y-6">
-                  <div className="py-2">
-                    <h3 className="heading-sm text-text-primary mb-3">
-                      {ORTOHAUER_NAME}
-                    </h3>
-                  </div>
-                  <div className="py-1">
-                    <p className="text-body leading-relaxed">
-                      {ORTOHAUER_ADDRESS}
-                    </p>
-                  </div>
-                  <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                    <Link
-                      href={`tel:${ORTOHAUER_PHONE_NUMBER}`}
-                      className="btn-primary text-sm whitespace-nowrap group flex gap-x-2 justify-center items-center"
-                    >
-                      <svg
-                        className="w-4 h-4 flex-shrink-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                        />
-                      </svg>
-                      <span>{ORTOHAUER_PHONE}</span>
-                    </Link>
-                    <Link
-                      href="#curitiba"
-                      className="btn-secondary text-sm whitespace-nowrap"
-                    >
-                      <span>Agendar em Curitiba</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
+          <div className="space-y-6 sm:space-y-8 fade-in">
+            <LocationCard
+              name={ORTOHAUER_NAME}
+              address={ORTOHAUER_ADDRESS}
+              phoneNumber={ORTOHAUER_PHONE_NUMBER}
+              phoneDisplay={ORTOHAUER_PHONE}
+              whatsappUrl={WHATSAPP_ORTOHAUER_URL}
+              scheduleHref="#curitiba"
+              scheduleText="Agendar em Curitiba"
+              colorScheme="brand"
+            />
 
-            <div className="card space-y-8 p-8">
-              <div className="flex items-start space-x-8">
-                <div className="w-24 h-24 bg-brand-500 rounded-3xl flex items-center justify-center text-white flex-shrink-0 shadow-large">
-                  <svg
-                    className="w-12 h-12"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                </div>
-                <div className="flex-1 space-y-6">
-                  <div className="py-2">
-                    <h3 className="heading-sm text-text-primary mb-3">
-                      {DAGOSTINI_NAME}
-                    </h3>
-                  </div>
-                  <div className="py-1">
-                    <p className="text-body leading-relaxed">
-                      {DAGOSTINI_ADDRESS}
-                    </p>
-                  </div>
-                  <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                    <Link
-                      href={`tel:${DAGOSTINI_PHONE_NUMBER}`}
-                      className="btn-primary text-sm whitespace-nowrap group flex gap-x-2 justify-center items-center"
-                    >
-                      <svg
-                        className="w-4 h-4 flex-shrink-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                        />
-                      </svg>
-                      <span>{DAGOSTINI_PHONE}</span>
-                    </Link>
-                    <Link
-                      href="#lapa"
-                      className="btn-secondary text-sm whitespace-nowrap"
-                    >
-                      <span>Agendar na Lapa</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <LocationCard
+              name={DAGOSTINI_NAME}
+              address={DAGOSTINI_ADDRESS}
+              phoneNumber={DAGOSTINI_PHONE_NUMBER}
+              phoneDisplay={DAGOSTINI_PHONE}
+              whatsappUrl={WHATSAPP_DAGOSTINI_URL}
+              scheduleHref="#lapa"
+              scheduleText="Agendar na Lapa"
+              colorScheme="brand-secondary"
+            />
           </div>
 
           <div className="fade-in">
             <div className="bg-brand-50 rounded-2xl p-10 lg:p-12 h-full flex flex-col justify-center shadow-soft border border-brand-100">
-              <div className="text-center space-y-8">
+              <div className="text-center">
                 <div className="w-24 h-24 bg-success-500 rounded-full flex items-center justify-center mx-auto shadow-medium">
                   <svg
                     className="w-12 h-12 text-black"
@@ -189,23 +81,17 @@ export default function Contact() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-8 text-center pt-4">
-                  <div className="space-y-3">
-                    <div className="text-3xl font-bold text-brand-600">
-                      {EXPERIENCE_YEARS}
-                    </div>
-                    <div className="text-sm text-text-muted font-medium">
-                      Anos de experiência
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="text-3xl font-bold text-brand-600">
-                      100%
-                    </div>
-                    <div className="text-sm text-text-muted font-medium">
-                      Satisfação
-                    </div>
-                  </div>
+                <div className="grid grid-cols-2 gap-6 sm:gap-8 text-center pt-4">
+                  <StatCard
+                    value={EXPERIENCE_YEARS}
+                    label="Anos de experiência"
+                    className="text-center"
+                  />
+                  <StatCard
+                    value="100%"
+                    label="Satisfação"
+                    className="text-center"
+                  />
                 </div>
               </div>
             </div>

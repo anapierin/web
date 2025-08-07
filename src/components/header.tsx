@@ -13,22 +13,27 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/95 backdrop-blur-md shadow-medium border-b border-neutral-200">
+    <header
+      className={`${
+        isMobileMenuOpen ? 'fixed' : 'fixed'
+      } top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/95 backdrop-blur-md shadow-medium border-b border-neutral-200`}
+    >
       <div className="container">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-20">
           {/* Logo/Brand */}
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="font-display text-lg lg:text-3xl font-bold text-brand-600 hover:text-brand-700 transition-colors duration-300"
+              className="font-display text-md lg:text-lg font-bold text-brand-600 hover:text-brand-700 transition-colors duration-300"
               onClick={() => setIsMobileMenuOpen(false)}
             >
+              {/* TODO: Renderizar logo do site */}
               {SITE_NAME}
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-12">
+          <nav className="hidden lg:flex items-center gap-6">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
@@ -37,13 +42,12 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
-                <span className="absolute -bottom-0 left-0 w-0 h-0.5 bg-brand-600 transition-all duration-300 group-hover:w-full rounded-full"></span>
               </Link>
             ))}
-            <div className="flex items-center gap-5 ml-8 pl-8 border-l border-neutral-300">
+            <div className="flex items-center gap-5  pl-8 border-l border-neutral-300">
               <Link
                 href={`tel:${PHONE_NUMBER}`}
-                className="btn-ghost flex items-center gap-2"
+                className="btn-ghost-outline flex items-center gap-2 text-nowrap"
               >
                 <svg
                   className="w-4 h-4 text-brand-600"
@@ -60,7 +64,7 @@ export default function Header() {
                 </svg>
                 {PHONE_DISPLAY}
               </Link>
-              <Link href="#contact" className="btn-primary">
+              <Link href="#contact" className="btn-primary text-nowrap">
                 Agendar Consulta
               </Link>
             </div>
@@ -100,7 +104,7 @@ export default function Header() {
         {/* Mobile Menu */}
         <div
           className={`lg:hidden transition-all duration-500 overflow-hidden ${
-            isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
           <div className="py-8 space-y-8 bg-white/95 backdrop-blur-md rounded-2xl mt-6 shadow-medium border border-neutral-200">
@@ -109,14 +113,14 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block w-full text-left px-8 py-4 text-text-primary hover:text-brand-600 hover:bg-brand-50 transition-all duration-300 font-medium text-base rounded-xl mx-2"
+                  className="block text-left ml-8 py-4 text-text-primary hover:text-brand-600 hover:bg-brand-50 transition-all duration-300 font-medium text-base rounded-xl mx-2 w-fit"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
             </div>
-            <div className="px-6 pt-6 border-t border-neutral-200 space-y-4">
+            <div className="px-6 pt-6 border-t border-neutral-200 space-y-4 flex flex-col">
               <Link
                 href={`tel:${PHONE_NUMBER}`}
                 className="btn-ghost w-full flex items-center justify-center gap-2"

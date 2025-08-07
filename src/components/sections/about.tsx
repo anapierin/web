@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { CredentialCard, FeatureCard } from '@/components/common'
 
 export default function About() {
   return (
@@ -36,104 +37,63 @@ export default function About() {
           <div className="space-y-10 fade-in order-1 lg:order-2">
             {/* Credentials */}
             <div className="space-y-6">
-              <div className="grid gap-8">
-                <div className="group bg-gradient-to-br from-white to-brand-50/30 rounded-3xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-[1.02] border border-brand-100/50">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-brand-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <svg
-                        className="w-6 h-6 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                        />
-                      </svg>
-                    </div>
-                    <h3 className="heading-sm text-text-primary">
-                      Graduação em Medicina
-                    </h3>
-                  </div>
-                  <p className="text-lg text-brand-700 font-medium ml-16">
-                    PUCPR (2018)
-                  </p>
-                </div>
+              <div className="grid gap-6 sm:gap-8">
+                <CredentialCard
+                  icon={
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  }
+                  title="Graduação em Medicina"
+                  description="PUCPR (2018)"
+                  colorScheme="brand"
+                  variant="primary"
+                />
 
-                <div className="group bg-gradient-to-br from-white to-brand-50/30 rounded-3xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-[1.02] border border-brand-100/50">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-brand-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <svg
-                        className="w-6 h-6 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                        />
-                      </svg>
-                    </div>
-                    <h3 className="heading-sm text-text-primary">
-                      Residência em Ortopedia e Traumatologia
-                    </h3>
-                  </div>
-                  <p className="text-lg text-brand-700 font-medium ml-16">
-                    Santa Casa de Curitiba (2021-2024)
-                  </p>
-                </div>
+                <CredentialCard
+                  icon={
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  }
+                  title="Residência em Ortopedia e Traumatologia"
+                  description="Santa Casa de Curitiba (2021-2024)"
+                  colorScheme="brand"
+                  variant="secondary"
+                />
 
-                <div className="group bg-gradient-to-br from-white to-success-50/30 rounded-3xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-[1.02] border border-success-100/50">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-success-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <svg
-                        className="w-6 h-6 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                        />
-                      </svg>
+                <CredentialCard
+                  icon={
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                  }
+                  title="Especializações"
+                  colorScheme="success"
+                  variant="primary"
+                  specialContent={
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full bg-success-500 mt-3 flex-shrink-0"></div>
+                        <p className="text-lg text-success-700 font-medium">
+                          Pós Graduação em Nutrologia - USP Ribeirão Preto (2020-2021)
+                        </p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full bg-success-500 mt-3 flex-shrink-0"></div>
+                        <p className="text-lg text-success-700 font-medium">
+                          Pós Graduação em Medicina Esportiva - Uniguaçu (2022-2023)
+                        </p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full bg-success-500 mt-3 flex-shrink-0"></div>
+                        <p className="text-lg text-success-700 font-medium">
+                          Pós Graduação em Medicina Regenerativa - Cetrus SP (2025)
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="heading-sm text-text-primary">
-                      Especializações
-                    </h3>
-                  </div>
-                  <div className="space-y-4 ml-16">
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-success-500 mt-3 flex-shrink-0"></div>
-                      <p className="text-lg text-success-700 font-medium">
-                        Pós Graduação em Nutrologia - USP Ribeirão Preto
-                        (2020-2021)
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-success-500 mt-3 flex-shrink-0"></div>
-                      <p className="text-lg text-success-700 font-medium">
-                        Pós Graduação em Medicina Esportiva - Uniguaçu
-                        (2022-2023)
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-success-500 mt-3 flex-shrink-0"></div>
-                      <p className="text-lg text-success-700 font-medium">
-                        Pós Graduação em Medicina Regenerativa - Cetrus SP
-                        (2025)
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                  }
+                />
               </div>
             </div>
           </div>
@@ -152,78 +112,40 @@ export default function About() {
 
         {/* Three Pillars - Full Width Section */}
         <div className="fade-in">
-          <div className="grid sm:grid-cols-3 gap-10 pt-12">
-            <div className="text-center group">
-              <div className="w-24 h-24 bg-brand-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-medium">
-                <svg
-                  className="w-12 h-12 text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 pt-12">
+            <FeatureCard
+              icon={
+                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-              </div>
-              <h3 className="heading-sm text-text-primary mb-4">
-                Diagnóstico Precoce
-              </h3>
-              <p className="text-body leading-relaxed">
-                Melhores resultados através de avaliação detalhada
-              </p>
-            </div>
+              }
+              title="Diagnóstico Precoce"
+              description="Melhores resultados através de avaliação detalhada"
+              colorScheme="brand-primary"
+            />
 
-            <div className="text-center group">
-              <div className="w-24 h-24 bg-brand-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-medium">
-                <svg
-                  className="w-12 h-12 text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
+            <FeatureCard
+              icon={
+                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                 </svg>
-              </div>
-              <h3 className="heading-sm text-text-primary mb-4">
-                Tratamento Preciso
-              </h3>
-              <p className="text-body leading-relaxed">
-                Abordagem especializada e baseada em evidências
-              </p>
-            </div>
+              }
+              title="Tratamento Preciso"
+              description="Abordagem especializada e baseada em evidências"
+              colorScheme="brand-secondary"
+            />
 
-            <div className="text-center group">
-              <div className="w-24 h-24 bg-success-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-medium">
-                <svg
-                  className="w-12 h-12 text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V13M15 10h-1.586a1 1 0 00-.707.293l-1.414 1.414a1 1 0 00-.293.707V13"
-                  />
+            <FeatureCard
+              icon={
+                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  <circle cx="12" cy="12" r="3" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
                 </svg>
-              </div>
-              <h3 className="heading-sm text-text-primary mb-4">
-                Alívio dos Sintomas
-              </h3>
-              <p className="text-body leading-relaxed">
-                Retorno ao bem estar e qualidade de vida
-              </p>
-            </div>
+              }
+              title="Alívio dos Sintomas"
+              description="Retorno ao bem estar e qualidade de vida"
+              colorScheme="success"
+            />
           </div>
         </div>
       </div>

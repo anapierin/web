@@ -75,6 +75,7 @@
 
   .btn-secondary svg {
     color: #754B2F;
+    transition: color 0.3s ease;
   }
 
   .btn-ghost svg {
@@ -128,7 +129,6 @@
 
   .btn-primary:hover {
     background-color: #5A3622;
-    transform: translateY(-2px);
     box-shadow: 0 4px 20px rgba(117, 75, 47, 0.15);
   }
 
@@ -149,6 +149,11 @@
     transform: translateY(-2px);
   }
 
+  /* TODO: how can i make the svg also change color on hover? */
+  .btn-secondary:hover svg {
+    color: white;
+  }
+
   .btn-secondary:active {
     transform: translateY(0);
   }
@@ -162,6 +167,19 @@
   .btn-ghost:hover {
     background-color: #FDF9F0;
     color: #5A3622;
+  }
+
+  .btn-ghost-outline {
+    @apply px-6 py-3;
+    background-color: transparent;
+    color: #754B2F;
+    border: 1px solid #754B2F;
+  }
+
+  .btn-ghost-outline:hover {
+    background-color: #FDF9F0;
+    color: #5A3622;
+    border-color: #5A3622;
   }
 
   .card {
@@ -190,7 +208,7 @@
   }
 
   .section {
-    @apply py-16;
+    @apply py-24;
   }
 
   @media (min-width: 1024px) {
