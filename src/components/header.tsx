@@ -9,6 +9,8 @@ import {
   NAV_LINKS,
 } from '@/lib/constants'
 
+import Image from 'next/image'
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -24,11 +26,17 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="font-display text-md lg:text-lg font-bold text-brand-600 hover:text-brand-700 transition-colors duration-300"
+              className="text-md lg:text-lg font-bold text-brand-600 hover:text-brand-700 transition-colors duration-300"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {/* TODO: Renderizar logo do site */}
-              {SITE_NAME}
+              <Image
+                className="hover:scale-110 transition-transform duration-300"
+                src="/shared/symbol.png"
+                alt={SITE_NAME}
+                width={48}
+                height={48}
+                quality={100}
+              />
             </Link>
           </div>
 
@@ -73,7 +81,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-3 rounded-xl text-text-primary hover:text-brand-600 hover:bg-brand-50 transition-all duration-300"
+            className="lg:hidden p-3 rounded-xl text-text-primary hover:text-brand-600 hover:bg-brand-50 transition-all duration-300 cursor-pointer"
             aria-label="Menu"
           >
             <svg

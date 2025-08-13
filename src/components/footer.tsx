@@ -13,17 +13,25 @@ import {
   INSTAGRAM_URL,
   FACEBOOK_URL,
   WHATSAPP_DOCTOR_URL,
+  SITE_NAME,
 } from '@/lib/constants'
+import Image from 'next/image'
 
-// TODO: Renderizar logo do site
 export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-neutral-100 py-12">
       <div className="container">
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="md:col-span-2">
-            <div className="py-2">
-              <h3 className="text-2xl font-bold mb-6 text-brand-400">{NAME}</h3>
+            <div className="py-2 flex items-center">
+              <Image
+                src="/shared/symbol-white-raw.png"
+                alt={SITE_NAME}
+                width={96}
+                height={96}
+                quality={100}
+              />
+              <h3 className="text-2xl font-medium text-brand-400">{NAME}</h3>
             </div>
 
             {/* Professional Credentials */}
@@ -111,7 +119,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="py-2">
+            <div className="mt-4 pb-2">
               <h4 className="text-lg font-semibold text-neutral-200">
                 Locais de Atendimento
               </h4>
@@ -120,7 +128,7 @@ export default function Footer() {
             {/* Ortohauer */}
             <div className="text-neutral-300">
               <div className="py-1">
-                <div className="font-medium text-neutral-200 mb-3">
+                <div className="font-medium text-neutral-200 mb-1">
                   {ORTOHAUER_NAME}
                 </div>
                 <div className="space-y-1">
@@ -135,7 +143,7 @@ export default function Footer() {
 
               {/* Dagostini */}
               <div className="py-1">
-                <div className="font-medium text-neutral-200 mb-3">
+                <div className="font-medium text-neutral-200 mb-1">
                   {DAGOSTINI_NAME}
                 </div>
                 <div className="space-y-1">
@@ -151,7 +159,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="py-2">
+            <div className="mt-4 pb-2">
               <h4 className="text-lg font-semibold text-neutral-200">
                 Tratamentos
               </h4>
@@ -170,7 +178,7 @@ export default function Footer() {
             <div className="text-neutral-400 text-sm py-2">
               © 2025 Dra. Ana Pierin. Todos os direitos reservados.
             </div>
-            <div className="flex flex-wrap gap-8 py-2">
+            <div className="flex flex-wrap gap-6 py-2">
               <Link
                 href="#about"
                 className="text-neutral-400 hover:text-brand-400 transition-colors text-sm font-medium"

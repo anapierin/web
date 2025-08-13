@@ -208,12 +208,12 @@
   }
 
   .section {
-    @apply py-24;
+    @apply py-18;
   }
 
   @media (min-width: 1024px) {
     .section {
-      @apply py-32;
+      @apply py-24;
     }
   }
 

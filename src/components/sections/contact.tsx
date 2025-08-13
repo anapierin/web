@@ -71,7 +71,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-6">
-                  <h3 className="heading-md text-text-primary">
+                  <h3 className="heading-lg text-text-primary">
                     Atendimento Humanizado
                   </h3>
                   <p className="text-body leading-relaxed">

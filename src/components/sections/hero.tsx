@@ -50,9 +50,8 @@ export default function Hero() {
                 </span>
               </h1>
 
-              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-display font-semibold text-text-secondary">
-                Médica Ortopedista, com foco em Ortopedia Esportiva
-                <br />e dor e prescritora de Cannabis Medicinal
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-display font-normal text-text-secondary">
+                Especialista em Ortopedia e Traumatologia
               </h2>
             </div>
           </div>
@@ -69,6 +68,7 @@ export default function Hero() {
                   className="object-cover object-center"
                   priority
                   sizes="(max-width: 1024px) 100vw, 45vw"
+                  quality={100}
                 />
               </div>
 
@@ -111,8 +111,8 @@ export default function Hero() {
           <div className="pt-12 max-w-4xl">
             <p className="text-xl lg:text-2xl w-full">
               Cuidado especializado com excelência técnica, empatia e
-              acolhimento para melhorar sua qualidade de vida. Atendimento
-              humanizado e personalizado.
+              acolhimento para melhorar sua qualidade de vida. Oferecendo
+              tratamentos minimamente invasivos para tratamento da dor.
             </p>
           </div>
 

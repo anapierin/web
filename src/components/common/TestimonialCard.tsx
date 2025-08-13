@@ -5,16 +5,16 @@ export interface TestimonialCardProps {
   className?: string
 }
 
-export default function TestimonialCard({ 
-  name, 
-  text, 
-  rating, 
-  className = '' 
+export default function TestimonialCard({
+  name,
+  text,
+  rating,
+  className = '',
 }: TestimonialCardProps) {
   const getInitials = (fullName: string) => {
     return fullName
       .split(' ')
-      .map(word => word.charAt(0))
+      .map((word) => word.charAt(0))
       .join('')
       .substring(0, 2)
       .toUpperCase()
@@ -45,7 +45,7 @@ export default function TestimonialCard({
 
       {/* Author */}
       <div className="flex items-center space-x-4">
-        <div className="w-14 h-14 bg-brand-600 rounded-full flex items-center justify-center text-white font-semibold">
+        <div className="w-14 h-14 border-1 border-black bg-[#754B2F] rounded-full flex items-center justify-center text-white font-semibold">
           {getInitials(name)}
         </div>
         <div>

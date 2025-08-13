@@ -6,7 +6,7 @@ export default function About() {
     <section id="about" className="py-20 lg:py-32 bg-neutral-50">
       <div className="container">
         {/* Section Title - Centered, Full Width */}
-        <div className="text-center mb-16 lg:mb-20 fade-in">
+        <div className="text-center mb-8 lg:mb-16 fade-in">
           <h2 className="heading-lg text-text-primary leading-tight mb-6">
             Quem é a Dra Ana Pierin?
           </h2>
@@ -17,13 +17,14 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center mb-20 lg:mb-24">
           {/* Image */}
           <div className="relative fade-in order-2 lg:order-1">
-            <div className="relative w-full aspect-[3/4] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl group">
+            <div className="relative w-full aspect-[2/3]  rounded-3xl overflow-hidden shadow-2xl group">
               <Image
-                src="/shared/ana-01.JPEG"
+                src="/shared/about.JPEG"
                 alt="Dra. Ana Pierin - Ortopedista e Traumatologista"
                 fill
                 className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={100}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
@@ -40,8 +41,18 @@ export default function About() {
               <div className="grid gap-6 sm:gap-8">
                 <CredentialCard
                   icon={
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                      />
                     </svg>
                   }
                   title="Graduação em Medicina"
@@ -52,8 +63,18 @@ export default function About() {
 
                 <CredentialCard
                   icon={
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      />
                     </svg>
                   }
                   title="Residência em Ortopedia e Traumatologia"
@@ -64,32 +85,36 @@ export default function About() {
 
                 <CredentialCard
                   icon={
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                      />
                     </svg>
                   }
                   title="Especializações"
                   colorScheme="success"
                   variant="primary"
                   specialContent={
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-success-500 mt-3 flex-shrink-0"></div>
-                        <p className="text-lg text-success-700 font-medium">
-                          Pós Graduação em Nutrologia - USP Ribeirão Preto (2020-2021)
-                        </p>
+                    <div className="space-y-2">
+                      <div className="text-md sm:text-lg text-brand-700 font-medium">
+                        Pós Graduação em Nutrologia - USP Ribeirão Preto
+                        (2020-2021)
                       </div>
-                      <div className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-success-500 mt-3 flex-shrink-0"></div>
-                        <p className="text-lg text-success-700 font-medium">
-                          Pós Graduação em Medicina Esportiva - Uniguaçu (2022-2023)
-                        </p>
+                      <div className="text-md sm:text-lg text-brand-700 font-medium">
+                        Pós Graduação em Medicina Esportiva - Uniguaçu
+                        (2022-2023)
                       </div>
-                      <div className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-success-500 mt-3 flex-shrink-0"></div>
-                        <p className="text-lg text-success-700 font-medium">
-                          Pós Graduação em Medicina Regenerativa - Cetrus SP (2025)
-                        </p>
+                      <div className="text-md sm:text-lg text-brand-700 font-medium">
+                        Pós Graduação em Medicina Regenerativa - Cetrus SP
+                        (2025)
                       </div>
                     </div>
                   }
@@ -115,8 +140,18 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 pt-12">
             <FeatureCard
               icon={
-                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg
+                  className="w-12 h-12"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
               }
               title="Diagnóstico Precoce"
@@ -126,8 +161,18 @@ export default function About() {
 
             <FeatureCard
               icon={
-                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                <svg
+                  className="w-12 h-12"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                  />
                 </svg>
               }
               title="Tratamento Preciso"
@@ -137,9 +182,26 @@ export default function About() {
 
             <FeatureCard
               icon={
-                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  <circle cx="12" cy="12" r="3" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+                <svg
+                  className="w-12 h-12"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                  />
                 </svg>
               }
               title="Alívio dos Sintomas"
