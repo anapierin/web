@@ -22,6 +22,7 @@ import {
   EMAIL_URL,
   INSTAGRAM_URL,
   FACEBOOK_URL,
+  DOMAIN,
 } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -59,14 +60,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://draanapierin.com.br'),
+  metadataBase: new URL(DOMAIN),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: `${NAME} - ${ORTHOPEDIST_TITLE}`,
     description: `${SPECIALIST_DESCRIPTION} oferecendo tratamentos minimamente invasivos para tratamento da dor. Atendimento em Curitiba e Lapa.`,
-    url: 'https://draanapierin.com.br',
+    url: DOMAIN,
     siteName: NAME,
     locale: 'pt_BR',
     type: 'website',

@@ -50,9 +50,13 @@ export default function Hero() {
                 </span>
               </h1>
 
-              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-display font-normal text-text-secondary">
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-display font-normal text-text-secondary mb-2">
                 Especialista em Ortopedia e Traumatologia
               </h2>
+              <h3 className="text-xl lg:text-2xl xl:text-3xl font-display font-normal text-text-secondary">
+                Oferecendo tratamentos minimamente invasivos para tratamento da
+                dor.
+              </h3>
             </div>
           </div>
 
@@ -111,8 +115,7 @@ export default function Hero() {
           <div className="pt-12 max-w-4xl">
             <p className="text-xl lg:text-2xl w-full">
               Cuidado especializado com excelência técnica, empatia e
-              acolhimento para melhorar sua qualidade de vida. Oferecendo
-              tratamentos minimamente invasivos para tratamento da dor.
+              acolhimento para melhorar sua qualidade de vida.
             </p>
           </div>
 

@@ -113,8 +113,8 @@ export default function About() {
                         (2022-2023)
                       </div>
                       <div className="text-md sm:text-lg text-brand-700 font-medium">
-                        Pós Graduação em Medicina Regenerativa - Cetrus SP
-                        (2025)
+                        Pós Graduação em Medicina Regenerativa
+                        Musculo-Esquelética - Cetrus SP (2025)
                       </div>
                     </div>
                   }

@@ -1,3 +1,5 @@
+export const DOMAIN = 'https://draanapierin.com.br'
+
 // Personal information
 export const NAME = 'Dra. Ana Pierin'
 export const SPECIALTY = 'Médica Ortopedista'
