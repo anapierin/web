@@ -50,10 +50,10 @@ export const metadata: Metadata = {
     siteName: 'Dra. Ana Pierin',
     images: [
       {
-        url: '/assets/logo-blue-bg.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Dra. Ana Pierin',
+        alt: 'Dra. Ana Pierin - Ortopedista e Traumatologista',
       },
     ],
   },
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: 'Dra. Ana Pierin - Ortopedista e Traumatologista',
     description:
       'Especialista em Ortopedia e Traumatologia oferecendo tratamentos minimamente invasivos para tratamento da dor.',
-    images: ['/assets/logo-blue-bg.png'],
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
