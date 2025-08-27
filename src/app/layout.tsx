@@ -1,6 +1,9 @@
+import './globals.css'
+
 import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
-import './globals.css'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -83,6 +86,8 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-brand-50 text-text-primary`}
       >
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
