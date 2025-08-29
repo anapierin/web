@@ -1,38 +1,38 @@
 import { ServiceCard, ConditionCard, CTASection } from '@/components/common'
 
+const services = [
+  {
+    title: 'Infiltração articular guiada por ultrassonografia',
+    description:
+      'Procedimento minimamente invasivo para tratamento direto da dor articular com precisão e segurança.',
+  },
+  {
+    title: 'Bloqueio anestésico em pontos gatilho de dor',
+    description:
+      'Técnica especializada para alívio imediato de dores musculares e pontos de tensão específicos.',
+  },
+  {
+    title: 'Terapia por Ondas de Choque',
+    description:
+      'Tratamento não-invasivo que acelera a recuperação de lesões e promove a regeneração tecidual.',
+  },
+  {
+    title: 'Tratamento cirúrgico de lesões tendíneas',
+    description:
+      'Cirurgias especializadas para restauração da função e mobilidade com técnicas modernas e minimamente invasivas.',
+  },
+]
+
+const conditions = [
+  'Check-up esportivo',
+  'Dor ou trauma agudo',
+  'Dor crônica',
+  'Lesões musculares',
+  'Artroses/artrites',
+  'Doenças da coluna vertebral',
+]
+
 export default function Services() {
-  const services = [
-    {
-      title: 'Infiltração articular guiada por ultrassonografia',
-      description:
-        'Procedimento minimamente invasivo para tratamento direto da dor articular com precisão e segurança.',
-    },
-    {
-      title: 'Bloqueio anestésico em pontos gatilho de dor',
-      description:
-        'Técnica especializada para alívio imediato de dores musculares e pontos de tensão específicos.',
-    },
-    {
-      title: 'Terapia por Ondas de Choque',
-      description:
-        'Tratamento não-invasivo que acelera a recuperação de lesões e promove a regeneração tecidual.',
-    },
-    {
-      title: 'Tratamento cirúrgico de lesões tendíneas',
-      description:
-        'Cirurgias especializadas para restauração da função e mobilidade com técnicas modernas e minimamente invasivas.',
-    },
-  ]
-
-  const conditions = [
-    'Check-up esportivo',
-    'Dor ou trauma agudo',
-    'Dor crônica',
-    'Lesões musculares',
-    'Artroses/artrites',
-    'Doenças da coluna vertebral',
-  ]
-
   return (
     <section id="services" className="section">
       <div className="container">

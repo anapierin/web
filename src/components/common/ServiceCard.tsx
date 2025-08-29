@@ -12,7 +12,7 @@ export default function ServiceCard({
   return (
     <div className={`card fade-in group ${className}`}>
       <div className="flex flex-col items-center justify-items-stretch flex-1 space-y-4 size-full">
-        <h3 className="heading-sm text-text-primary group-hover:text-brand-600 transition-colors duration-300">
+        <h3 className="heading-sm text-text-primary group-hover:text-brand-600 transition-colors duration-300 text-start w-full">
           {title}
         </h3>
         <p className="text-body leading-relaxed mb-0">{description}</p>

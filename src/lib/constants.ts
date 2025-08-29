@@ -28,9 +28,9 @@ export const FACEBOOK_URL =
 export const WHATSAPP_DOCTOR_URL =
   'https://api.whatsapp.com/send?phone=5541991001372' // Doctor's WhatsApp
 export const WHATSAPP_ORTOHAUER_URL =
-  'https://api.whatsapp.com/send?phone=5541996767400' // OrtoHauer Clinic
+  'https://api.whatsapp.com/send?phone=554137730373' // OrtoHauer Clinic
 export const WHATSAPP_DAGOSTINI_URL =
-  'https://api.whatsapp.com/send?phone=554137730373' // Dagostini Clinic
+  'https://api.whatsapp.com/send?phone=5541996767400' // Dagostini Clinic
 
 // Legacy WhatsApp links (keeping for backward compatibility)
 export const WHATSAPP_CANNABIS_URL = 'http://wa.link/5mklj4' // Teleconsulta Cannabis Medicinal
