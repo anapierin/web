@@ -34,7 +34,7 @@ export default function Contact() {
               phoneNumber={ORTOHAUER_PHONE_NUMBER}
               phoneDisplay={ORTOHAUER_PHONE}
               whatsappUrl={WHATSAPP_ORTOHAUER_URL}
-              scheduleHref="#curitiba"
+              scheduleHref={`tel:${ORTOHAUER_PHONE_NUMBER}`}
               scheduleText="Agendar em Curitiba"
               colorScheme="brand"
             />
@@ -45,7 +45,7 @@ export default function Contact() {
               phoneNumber={DAGOSTINI_PHONE_NUMBER}
               phoneDisplay={DAGOSTINI_PHONE}
               whatsappUrl={WHATSAPP_DAGOSTINI_URL}
-              scheduleHref="#lapa"
+              scheduleHref={`tel:${DAGOSTINI_PHONE_NUMBER}`}
               scheduleText="Agendar na Lapa"
               colorScheme="brand-secondary"
             />

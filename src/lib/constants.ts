@@ -28,7 +28,8 @@ export const FACEBOOK_URL =
 export const WHATSAPP_DOCTOR_URL =
   'https://api.whatsapp.com/send?phone=5541991001372' // Doctor's WhatsApp
 export const WHATSAPP_ORTOHAUER_URL =
-  'https://api.whatsapp.com/send?phone=554137730373' // OrtoHauer Clinic
+  'https://api.whatsapp.com/send?phone=5541988615954' // OrtoHauer Clinic
+// 'https://api.whatsapp.com/send?phone=554137730373' // OrtoHauer Clinic
 export const WHATSAPP_DAGOSTINI_URL =
   'https://api.whatsapp.com/send?phone=5541996767400' // Dagostini Clinic
 
@@ -49,9 +50,9 @@ export const ORTOHAUER_ADDRESS =
 export const ORTOHAUER_PHONE = '(41) 98861-5954'
 export const ORTOHAUER_PHONE_NUMBER = '+5541988615954'
 
-export const DAGOSTINI_NAME = 'Clínica Dagostini - Lapa'
+export const DAGOSTINI_NAME = "Clínica D'Agostini - Lapa"
 export const DAGOSTINI_ADDRESS =
-  'Rua Ten Henrique dos Santos, 360 - Centro, Lapa PR'
+  'Rua Tenente Henrique dos Santos, 360 - Centro, Lapa PR'
 export const DAGOSTINI_PHONE = '(41) 99676-7400'
 export const DAGOSTINI_PHONE_NUMBER = '+5541996767400'
 
