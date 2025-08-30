@@ -29,9 +29,10 @@ export const WHATSAPP_DOCTOR_URL =
   'https://api.whatsapp.com/send?phone=5541991001372' // Doctor's WhatsApp
 export const WHATSAPP_ORTOHAUER_URL =
   'https://api.whatsapp.com/send?phone=5541988615954' // OrtoHauer Clinic
-// 'https://api.whatsapp.com/send?phone=554137730373' // OrtoHauer Clinic
 export const WHATSAPP_DAGOSTINI_URL =
   'https://api.whatsapp.com/send?phone=5541996767400' // Dagostini Clinic
+export const WHATSAPP_EUROLUX_URL =
+  'https://api.whatsapp.com/send?phone=554137730373' // Eurolux Clinic
 
 // Legacy WhatsApp links (keeping for backward compatibility)
 export const WHATSAPP_CANNABIS_URL = 'http://wa.link/5mklj4' // Teleconsulta Cannabis Medicinal
@@ -49,6 +50,8 @@ export const ORTOHAUER_ADDRESS =
   'Rua Alcino Guanabara, 945 - Hauer, Curitiba PR'
 export const ORTOHAUER_PHONE = '(41) 98861-5954'
 export const ORTOHAUER_PHONE_NUMBER = '+5541988615954'
+
+export const EUROLUX_PHONE = '(41) 3773-0373'
 
 export const DAGOSTINI_NAME = "Clínica D'Agostini - Lapa"
 export const DAGOSTINI_ADDRESS =

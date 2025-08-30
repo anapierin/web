@@ -7,6 +7,7 @@ export interface LocationCardProps {
   address: string
   phoneDisplay: string
   phoneNumber: string
+  fixedPhoneDisplay?: string
   whatsappUrl?: string
   scheduleHref?: string
   scheduleText?: string
@@ -42,6 +43,7 @@ export default function LocationCard({
   address,
   phoneDisplay,
   phoneNumber,
+  fixedPhoneDisplay,
   whatsappUrl,
   scheduleHref = '#contact',
   scheduleText = 'Agendar',
@@ -65,6 +67,11 @@ export default function LocationCard({
           <h3 className="heading-sm text-text-primary">{name}</h3>
           <p className="text-text-secondary leading-relaxed">{address}</p>
           <p className="text-lg font-semibold text-brand-600">{phoneDisplay}</p>
+          {fixedPhoneDisplay && (
+            <p className="text-lg font-semibold text-brand-600">
+              {fixedPhoneDisplay}
+            </p>
+          )}
         </div>
       </div>
 

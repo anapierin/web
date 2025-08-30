@@ -10,6 +10,7 @@ import {
   WHATSAPP_ORTOHAUER_URL,
   WHATSAPP_DAGOSTINI_URL,
   EXPERIENCE_YEARS,
+  EUROLUX_PHONE,
 } from '@/lib/constants'
 import { LocationCard, StatCard } from '@/components/common'
 
@@ -33,6 +34,7 @@ export default function Contact() {
               address={ORTOHAUER_ADDRESS}
               phoneNumber={ORTOHAUER_PHONE_NUMBER}
               phoneDisplay={ORTOHAUER_PHONE}
+              fixedPhoneDisplay={EUROLUX_PHONE}
               whatsappUrl={WHATSAPP_ORTOHAUER_URL}
               scheduleHref={`tel:${ORTOHAUER_PHONE_NUMBER}`}
               scheduleText="Agendar em Curitiba"
