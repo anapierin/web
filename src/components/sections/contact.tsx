@@ -16,7 +16,7 @@ import { LocationCard, StatCard } from '@/components/common'
 
 export default function Contact() {
   return (
-    <section id="contact" className="section">
+    <section id="contato" className="section">
       <div className="container">
         <div className="text-center mb-16 fade-in">
           <h2 className="heading-lg text-text-primary mb-6">
@@ -36,8 +36,6 @@ export default function Contact() {
               phoneDisplay={ORTOHAUER_PHONE}
               fixedPhoneDisplay={EUROLUX_PHONE}
               whatsappUrl={WHATSAPP_ORTOHAUER_URL}
-              scheduleHref={`tel:${ORTOHAUER_PHONE_NUMBER}`}
-              scheduleText="Agendar em Curitiba"
               colorScheme="brand"
             />
 
@@ -47,8 +45,6 @@ export default function Contact() {
               phoneNumber={DAGOSTINI_PHONE_NUMBER}
               phoneDisplay={DAGOSTINI_PHONE}
               whatsappUrl={WHATSAPP_DAGOSTINI_URL}
-              scheduleHref={`tel:${DAGOSTINI_PHONE_NUMBER}`}
-              scheduleText="Agendar na Lapa"
               colorScheme="brand-secondary"
             />
           </div>

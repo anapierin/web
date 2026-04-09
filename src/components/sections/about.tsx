@@ -3,7 +3,7 @@ import { CredentialCard, FeatureCard } from '@/components/common'
 
 export default function About() {
   return (
-    <section id="about" className="py-20 lg:py-32 bg-neutral-50">
+    <section id="sobre" className="py-20 lg:py-32 bg-neutral-50">
       <div className="container">
         {/* Section Title - Centered, Full Width */}
         <div className="text-center mb-8 lg:mb-16 fade-in">
