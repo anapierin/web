@@ -24,15 +24,22 @@ export const INSTAGRAM_URL = 'https://www.instagram.com/anapierin.ortopedia/'
 export const FACEBOOK_URL =
   'https://www.facebook.com/people/Ana-Pierin-Ortopedia-e-Traumatologia/61557170002194/'
 
+const WHATSAPP_MESSAGE = encodeURIComponent(
+  `Olá! Vim pelo site da ${NAME} e gostaria de agendar uma consulta.`
+)
+
+const buildWhatsAppUrl = (phone: string) =>
+  `https://wa.me/${phone}?text=${WHATSAPP_MESSAGE}`
+
 // WhatsApp links
 export const WHATSAPP_DOCTOR_URL =
-  'https://api.whatsapp.com/send?phone=5541991001372' // Doctor's WhatsApp
+  buildWhatsAppUrl('5541991001372') // Doctor's WhatsApp
 export const WHATSAPP_ORTOHAUER_URL =
-  'https://api.whatsapp.com/send?phone=5541984881372' // OrtoHauer Clinic
+  buildWhatsAppUrl('5541984881372') // OrtoHauer Clinic
 export const WHATSAPP_DAGOSTINI_URL =
-  'https://api.whatsapp.com/send?phone=5541996767400' // Dagostini Clinic
+  buildWhatsAppUrl('5541996767400') // Dagostini Clinic
 export const WHATSAPP_EUROLUX_URL =
-  'https://api.whatsapp.com/send?phone=554137730373' // Eurolux Clinic
+  buildWhatsAppUrl('554137730373') // Eurolux Clinic
 
 // Legacy WhatsApp links (keeping for backward compatibility)
 export const WHATSAPP_CANNABIS_URL = 'http://wa.link/5mklj4' // Teleconsulta Cannabis Medicinal
