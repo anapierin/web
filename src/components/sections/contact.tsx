@@ -11,6 +11,7 @@ import {
   WHATSAPP_DAGOSTINI_URL,
   EXPERIENCE_YEARS,
   EUROLUX_PHONE,
+  EUROLUX_PHONE_NUMBER,
 } from '@/lib/constants'
 import { LocationCard, StatCard } from '@/components/common'
 
@@ -35,6 +36,7 @@ export default function Contact() {
               phoneNumber={ORTOHAUER_PHONE_NUMBER}
               phoneDisplay={ORTOHAUER_PHONE}
               fixedPhoneDisplay={EUROLUX_PHONE}
+              fixedPhoneNumber={EUROLUX_PHONE_NUMBER}
               whatsappUrl={WHATSAPP_ORTOHAUER_URL}
             />
 

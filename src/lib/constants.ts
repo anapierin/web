@@ -53,6 +53,7 @@ export const ORTOHAUER_ADDRESS =
   'Rua Alcino Guanabara, 945 - Hauer, Curitiba PR'
 
 export const EUROLUX_PHONE = '(41) 3773-0373'
+export const EUROLUX_PHONE_NUMBER = '+554137730373'
 export const ORTOHAUER_PHONE = SECRETARY_PHONE_DISPLAY
 export const ORTOHAUER_PHONE_NUMBER = SECRETARY_PHONE_NUMBER
 
