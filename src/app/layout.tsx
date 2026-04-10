@@ -1,9 +1,12 @@
 import './globals.css'
 
 import type { Metadata, Viewport } from 'next'
+import Script from 'next/script'
 import { Inter, Playfair_Display } from 'next/font/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { DOMAIN } from '../lib/constants'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -17,10 +20,8 @@ const playfair = Playfair_Display({
   display: 'swap',
 })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(DOMAIN),
   title: {
     default: 'Dra. Ana Pierin - Ortopedista e Traumatologista',
     template: '%s | Dra. Ana Pierin',
@@ -82,6 +83,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
+      {process.env.NEXT_PUBLIC_GTM_ID && (
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+      )}
+      <head>
+        {process.env.NODE_ENV === 'development' && (
+          <Script
+            src="//unpkg.com/react-grab/dist/index.global.js"
+            crossOrigin="anonymous"
+            strategy="beforeInteractive"
+          />
+        )}
+      </head>
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-brand-50 text-text-primary`}
       >

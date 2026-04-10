@@ -18,7 +18,7 @@ import {
   RQE_NUMBER,
   ORTOHAUER_NAME,
   DAGOSTINI_NAME,
-  PHONE_DISPLAY,
+  SECRETARY_PHONE_DISPLAY,
   EMAIL_URL,
   INSTAGRAM_URL,
   FACEBOOK_URL,
@@ -97,11 +97,8 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code', // TODO: Replace with actual verification code
-  },
   other: {
-    'contact:phone': PHONE_DISPLAY,
+    'contact:phone': SECRETARY_PHONE_DISPLAY,
     'contact:email': EMAIL_URL.replace('mailto:', ''),
     'contact:instagram': INSTAGRAM_URL,
     'contact:facebook': FACEBOOK_URL,

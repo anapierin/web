@@ -7,13 +7,14 @@ import {
   EXPERIENCE_YEARS,
   PATIENTS_TREATED,
   LOCATIONS_COUNT,
+  WHATSAPP_ORTOHAUER_URL,
 } from '@/lib/constants'
 import { StatCard } from '@/components/common'
 
 export default function Hero() {
   return (
     <section
-      id="hero"
+      id="inicio"
       className="section min-h-screen flex items-center relative overflow-hidden mt-12 lg:mt-0"
     >
       {/* Background gradient */}
@@ -122,7 +123,9 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 pt-4 ">
             <Link
-              href="#contact"
+              href={WHATSAPP_ORTOHAUER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary group whitespace-nowrap flex gap-x-2 justify-center items-center"
             >
               <svg
@@ -141,7 +144,7 @@ export default function Hero() {
               <span>Agendar Consulta</span>
             </Link>
             <Link
-              href="#about"
+              href="#sobre"
               className="btn-secondary group whitespace-nowrap flex gap-x-2 justify-center items-center"
             >
               <svg

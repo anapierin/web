@@ -1,4 +1,4 @@
-import { WHATSAPP_DOCTOR_URL } from '@/lib/constants'
+import { WHATSAPP_ORTOHAUER_URL } from '@/lib/constants'
 import { TestimonialCard, CTASection } from '@/components/common'
 
 export default function Testimonials() {
@@ -54,9 +54,7 @@ export default function Testimonials() {
             title="Pronto para começar seu tratamento?"
             subtitle="Agende sua consulta e descubra como podemos ajudar você a recuperar sua qualidade de vida."
             buttonText="Agendar Consulta"
-            buttonHref="#contact"
-            secondaryButtonText="Ligar Agora"
-            secondaryButtonHref={WHATSAPP_DOCTOR_URL}
+            buttonHref={WHATSAPP_ORTOHAUER_URL}
           />
         </div>
       </div>

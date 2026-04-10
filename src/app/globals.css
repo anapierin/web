@@ -151,7 +151,6 @@
     transform: translateY(-2px);
   }
 
-  /* TODO: how can i make the svg also change color on hover? */
   .btn-secondary:hover svg {
     color: white;
   }
@@ -211,6 +210,7 @@
 
   .section {
     @apply py-18;
+    scroll-margin-top: 100px;
   }
 
   @media (min-width: 1024px) {

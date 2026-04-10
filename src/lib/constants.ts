@@ -1,4 +1,4 @@
-export const DOMAIN = 'https://draanapierin.com.br'
+export const DOMAIN = 'https://www.draanapierin.com.br'
 
 // Personal information
 export const NAME = 'Dra. Ana Pierin'
@@ -28,7 +28,7 @@ export const FACEBOOK_URL =
 export const WHATSAPP_DOCTOR_URL =
   'https://api.whatsapp.com/send?phone=5541991001372' // Doctor's WhatsApp
 export const WHATSAPP_ORTOHAUER_URL =
-  'https://api.whatsapp.com/send?phone=5541988615954' // OrtoHauer Clinic
+  'https://api.whatsapp.com/send?phone=5541984881372' // OrtoHauer Clinic
 export const WHATSAPP_DAGOSTINI_URL =
   'https://api.whatsapp.com/send?phone=5541996767400' // Dagostini Clinic
 export const WHATSAPP_EUROLUX_URL =
@@ -40,18 +40,22 @@ export const WHATSAPP_CURITIBA_ORTOHAUER_URL = 'http://wa.link/lur15p' // Curiti
 export const WHATSAPP_LAPA_DAGOSTINI_URL = 'https://wa.link/biipul' // Lapa – Clínica Dagostini
 
 // Site & Contact Info
+
 export const SITE_NAME = 'Dra. Ana Pierin'
-export const PHONE_DISPLAY = '(41) 98861-5954'
-export const PHONE_NUMBER = '+5541988615954'
+
+// Secretary phone number (we are not going to expose doctor phone number)
+export const SECRETARY_PHONE_DISPLAY = '(41) 98488-1372'
+export const SECRETARY_PHONE_NUMBER = '+5541984881372'
 
 // Clinic addresses and contact information
 export const ORTOHAUER_NAME = 'OrtoHauer - Curitiba'
 export const ORTOHAUER_ADDRESS =
   'Rua Alcino Guanabara, 945 - Hauer, Curitiba PR'
-export const ORTOHAUER_PHONE = '(41) 98861-5954'
-export const ORTOHAUER_PHONE_NUMBER = '+5541988615954'
 
 export const EUROLUX_PHONE = '(41) 3773-0373'
+export const EUROLUX_PHONE_NUMBER = '+554137730373'
+export const ORTOHAUER_PHONE = SECRETARY_PHONE_DISPLAY
+export const ORTOHAUER_PHONE_NUMBER = SECRETARY_PHONE_NUMBER
 
 export const DAGOSTINI_NAME = "Clínica D'Agostini - Lapa"
 export const DAGOSTINI_ADDRESS =
@@ -66,8 +70,8 @@ export const LOCATIONS_COUNT = '2'
 
 // Navigation links
 export const NAV_LINKS = [
-  { href: '#hero', label: 'Início' },
-  { href: '#about', label: 'Sobre' },
-  { href: '#services', label: 'Tratamentos' },
-  { href: '#contact', label: 'Contato' },
+  { href: '#inicio', label: 'Início' },
+  { href: '#sobre', label: 'Sobre' },
+  { href: '#tratamentos', label: 'Tratamentos' },
+  { href: '#contato', label: 'Contato' },
 ]

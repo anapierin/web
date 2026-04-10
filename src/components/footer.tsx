@@ -12,7 +12,7 @@ import {
   RQE_NUMBER,
   INSTAGRAM_URL,
   FACEBOOK_URL,
-  WHATSAPP_DOCTOR_URL,
+  WHATSAPP_ORTOHAUER_URL,
   SITE_NAME,
 } from '@/lib/constants'
 import Image from 'next/image'
@@ -180,25 +180,25 @@ export default function Footer() {
             </div>
             <div className="flex flex-wrap gap-6 py-2">
               <Link
-                href="#about"
+                href="#sobre"
                 className="text-neutral-400 hover:text-brand-400 transition-colors text-sm font-medium"
               >
                 Sobre
               </Link>
               <Link
-                href="#services"
+                href="#tratamentos"
                 className="text-neutral-400 hover:text-brand-400 transition-colors text-sm font-medium"
               >
                 Tratamentos
               </Link>
               <Link
-                href="#contact"
+                href="#contato"
                 className="text-neutral-400 hover:text-brand-400 transition-colors text-sm font-medium"
               >
                 Contato
               </Link>
               <Link
-                href={WHATSAPP_DOCTOR_URL}
+                href={WHATSAPP_ORTOHAUER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-brand-400 transition-colors text-sm font-medium"
