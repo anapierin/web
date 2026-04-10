@@ -76,7 +76,7 @@ export default function LocationCard({
           href={whatsappUrl || `tel:${phoneNumber}`}
           target={whatsappUrl ? '_blank' : undefined}
           rel={whatsappUrl ? 'noopener noreferrer' : undefined}
-          className="btn-primary flex items-center justify-center gap-2 flex-1 text-sm"
+          className="btn-primary inline-flex items-center justify-center gap-2 text-sm px-6 py-3"
         >
           {whatsappUrl ? (
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

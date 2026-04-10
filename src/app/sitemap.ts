@@ -1,18 +1,33 @@
 import type { MetadataRoute } from 'next'
-
-// TODO: Instead of using this env. we could do it directly from consts
 import { DOMAIN } from '../lib/constants'
-
-const siteUrl = DOMAIN
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
+
   return [
     {
-      url: `${siteUrl.replace(/\/$/, '')}/`,
+      url: DOMAIN,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 1,
+    },
+    {
+      url: `${DOMAIN}/#sobre`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${DOMAIN}/#tratamentos`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${DOMAIN}/#contato`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
     },
   ]
 }

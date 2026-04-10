@@ -36,7 +36,6 @@ export default function Contact() {
               phoneDisplay={ORTOHAUER_PHONE}
               fixedPhoneDisplay={EUROLUX_PHONE}
               whatsappUrl={WHATSAPP_ORTOHAUER_URL}
-              colorScheme="brand"
             />
 
             <LocationCard
@@ -45,7 +44,6 @@ export default function Contact() {
               phoneNumber={DAGOSTINI_PHONE_NUMBER}
               phoneDisplay={DAGOSTINI_PHONE}
               whatsappUrl={WHATSAPP_DAGOSTINI_URL}
-              colorScheme="brand-secondary"
             />
           </div>
 

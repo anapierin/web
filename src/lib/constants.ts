@@ -1,4 +1,3 @@
-// TODO: Let's use this as sitemap
 export const DOMAIN = 'https://www.draanapierin.com.br'
 
 // Personal information
@@ -28,11 +27,8 @@ export const FACEBOOK_URL =
 // WhatsApp links
 export const WHATSAPP_DOCTOR_URL =
   'https://api.whatsapp.com/send?phone=5541991001372' // Doctor's WhatsApp
-// TODO: 41984881372
 export const WHATSAPP_ORTOHAUER_URL =
   'https://api.whatsapp.com/send?phone=5541984881372' // OrtoHauer Clinic
-// export const WHATSAPP_ORTOHAUER_URL =
-//   'https://api.whatsapp.com/send?phone=5541984881372' // OrtoHauer Clinic
 export const WHATSAPP_DAGOSTINI_URL =
   'https://api.whatsapp.com/send?phone=5541996767400' // Dagostini Clinic
 export const WHATSAPP_EUROLUX_URL =
@@ -55,13 +51,10 @@ export const SECRETARY_PHONE_NUMBER = '+5541984881372'
 export const ORTOHAUER_NAME = 'OrtoHauer - Curitiba'
 export const ORTOHAUER_ADDRESS =
   'Rua Alcino Guanabara, 945 - Hauer, Curitiba PR'
-// TODO: OrtoHAUER phone number even tho exists we should actually route to secretary phone number, this is a new request from the client, but we can leve these consts here for now, comemnted but at now we are reassigning
 
 export const EUROLUX_PHONE = '(41) 3773-0373'
 export const ORTOHAUER_PHONE = SECRETARY_PHONE_DISPLAY
 export const ORTOHAUER_PHONE_NUMBER = SECRETARY_PHONE_NUMBER
-// export const ORTOHAUER_PHONE = '(41) 98861-5954'
-// export const ORTOHAUER_PHONE_NUMBER = '+5541988615954'
 
 export const DAGOSTINI_NAME = "Clínica D'Agostini - Lapa"
 export const DAGOSTINI_ADDRESS =
