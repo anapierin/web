@@ -58,6 +58,7 @@ export const SECRETARY_PHONE_NUMBER = '+5541984881372'
 export const ORTOHAUER_NAME = 'OrtoHauer - Curitiba'
 export const ORTOHAUER_ADDRESS =
   'Rua Alcino Guanabara, 945 - Hauer, Curitiba PR'
+export const ORTOHAUER_DIRECT_PHONE = '(41) 98861-5954'
 
 export const EUROLUX_PHONE = '(41) 3773-0373'
 export const EUROLUX_PHONE_NUMBER = '+554137730373'
