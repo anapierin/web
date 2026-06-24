@@ -44,8 +44,6 @@ export const WHATSAPP_DAGOSTINI_URL =
     '5541996767400',
     `Olá! Vim pelo site da ${NAME} e gostaria de agendar uma consulta na Clínica D'Agostini - Lapa.`
   ) // Dagostini Clinic
-export const WHATSAPP_EUROLUX_URL =
-  buildWhatsAppUrl('554137730373') // Eurolux Clinic
 
 // Legacy WhatsApp links (keeping for backward compatibility)
 export const WHATSAPP_CANNABIS_URL = 'http://wa.link/5mklj4' // Teleconsulta Cannabis Medicinal
@@ -67,8 +65,6 @@ export const ORTOHAUER_ADDRESS =
 export const ORTOHAUER_DIRECT_PHONE = '(41) 98861-5954'
 export const ORTOHAUER_DIRECT_PHONE_NUMBER = '+5541988615954'
 
-export const EUROLUX_PHONE = '(41) 3773-0373'
-export const EUROLUX_PHONE_NUMBER = '+554137730373'
 export const ORTOHAUER_PHONE = ORTOHAUER_DIRECT_PHONE
 export const ORTOHAUER_PHONE_NUMBER = ORTOHAUER_DIRECT_PHONE_NUMBER
 

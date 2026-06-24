@@ -2,9 +2,11 @@ import {
   ORTOHAUER_NAME,
   ORTOHAUER_ADDRESS,
   ORTOHAUER_PHONE,
+  ORTOHAUER_PHONE_NUMBER,
   DAGOSTINI_NAME,
   DAGOSTINI_ADDRESS,
   DAGOSTINI_PHONE,
+  DAGOSTINI_PHONE_NUMBER,
   WHATSAPP_ORTOHAUER_URL,
   WHATSAPP_DAGOSTINI_URL,
   EXPERIENCE_YEARS,
@@ -30,6 +32,7 @@ export default function Contact() {
               name={ORTOHAUER_NAME}
               address={ORTOHAUER_ADDRESS}
               phoneDisplay={ORTOHAUER_PHONE}
+              phoneNumber={ORTOHAUER_PHONE_NUMBER}
               whatsappUrl={WHATSAPP_ORTOHAUER_URL}
             />
 
@@ -37,6 +40,7 @@ export default function Contact() {
               name={DAGOSTINI_NAME}
               address={DAGOSTINI_ADDRESS}
               phoneDisplay={DAGOSTINI_PHONE}
+              phoneNumber={DAGOSTINI_PHONE_NUMBER}
               whatsappUrl={WHATSAPP_DAGOSTINI_URL}
             />
           </div>

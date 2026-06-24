@@ -6,7 +6,7 @@ export interface LocationCardProps {
   name: string
   address: string
   phoneDisplay: string
-  fixedPhoneDisplay?: string
+  phoneNumber: string
   whatsappUrl?: string
   colorScheme?: 'brand' | 'brand-secondary'
   className?: string
@@ -39,7 +39,7 @@ export default function LocationCard({
   name,
   address,
   phoneDisplay,
-  fixedPhoneDisplay,
+  phoneNumber,
   whatsappUrl,
   colorScheme = 'brand',
   className = '',
@@ -60,12 +60,12 @@ export default function LocationCard({
         <div className="flex-1 space-y-4">
           <h3 className="heading-sm text-text-primary">{name}</h3>
           <p className="text-text-secondary leading-relaxed">{address}</p>
-          <p className="text-lg font-semibold text-brand-600">{phoneDisplay}</p>
-          {fixedPhoneDisplay && (
-            <p className="text-lg font-semibold text-brand-600">
-              {fixedPhoneDisplay}
-            </p>
-          )}
+          <Link
+            href={`tel:${phoneNumber}`}
+            className="block text-lg font-semibold text-brand-600 hover:text-brand-700 transition-colors"
+          >
+            {phoneDisplay}
+          </Link>
           {whatsappUrl && (
             <Link
               href={whatsappUrl}
