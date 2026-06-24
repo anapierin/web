@@ -62,7 +62,7 @@ export default function LocationCard({
           <p className="text-text-secondary leading-relaxed">{address}</p>
           <Link
             href={`tel:${phoneNumber}`}
-            className="block text-lg font-semibold text-brand-600 hover:text-brand-700 transition-colors"
+            className="block w-fit text-lg font-semibold text-brand-600 hover:text-brand-700 transition-colors"
           >
             {phoneDisplay}
           </Link>
