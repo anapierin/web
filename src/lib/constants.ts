@@ -25,6 +25,7 @@ export const FACEBOOK_URL =
   'https://www.facebook.com/people/Ana-Pierin-Ortopedia-e-Traumatologia/61557170002194/'
 
 const DEFAULT_WHATSAPP_MESSAGE = `Olá! Vim pelo site da ${NAME} e gostaria de agendar uma consulta.`
+const EVALUATION_WHATSAPP_MESSAGE = `Olá! Vim pelo site da ${NAME} e gostaria de agendar uma avaliação.`
 
 const buildWhatsAppUrl = (
   phone: string,
@@ -38,6 +39,11 @@ export const WHATSAPP_ORTOHAUER_URL =
   buildWhatsAppUrl(
     '5541995432742',
     DEFAULT_WHATSAPP_MESSAGE
+  ) // NIKA - Assistência ao Paciente
+export const WHATSAPP_ORTOHAUER_EVALUATION_URL =
+  buildWhatsAppUrl(
+    '5541995432742',
+    EVALUATION_WHATSAPP_MESSAGE
   ) // NIKA - Assistência ao Paciente
 export const WHATSAPP_DAGOSTINI_URL =
   buildWhatsAppUrl(
