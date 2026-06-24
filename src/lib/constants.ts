@@ -24,20 +24,26 @@ export const INSTAGRAM_URL = 'https://www.instagram.com/anapierin.ortopedia/'
 export const FACEBOOK_URL =
   'https://www.facebook.com/people/Ana-Pierin-Ortopedia-e-Traumatologia/61557170002194/'
 
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  `Olá! Vim pelo site da ${NAME} e gostaria de agendar uma consulta.`
-)
+const DEFAULT_WHATSAPP_MESSAGE = `Olá! Vim pelo site da ${NAME} e gostaria de agendar uma consulta.`
 
-const buildWhatsAppUrl = (phone: string) =>
-  `https://wa.me/${phone}?text=${WHATSAPP_MESSAGE}`
+const buildWhatsAppUrl = (
+  phone: string,
+  message: string = DEFAULT_WHATSAPP_MESSAGE
+) => `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 
 // WhatsApp links
 export const WHATSAPP_DOCTOR_URL =
   buildWhatsAppUrl('5541991001372') // Doctor's WhatsApp
 export const WHATSAPP_ORTOHAUER_URL =
-  buildWhatsAppUrl('5541995432742') // Scheduling WhatsApp
+  buildWhatsAppUrl(
+    '5541995432742',
+    `Olá, NIKA! Vim pelo site da ${NAME} e gostaria de agendar uma consulta na OrtoHauer - Curitiba.`
+  ) // NIKA - Assistência ao Paciente
 export const WHATSAPP_DAGOSTINI_URL =
-  buildWhatsAppUrl('5541996767400') // Dagostini Clinic
+  buildWhatsAppUrl(
+    '5541996767400',
+    `Olá! Vim pelo site da ${NAME} e gostaria de agendar uma consulta na Clínica D'Agostini - Lapa.`
+  ) // Dagostini Clinic
 export const WHATSAPP_EUROLUX_URL =
   buildWhatsAppUrl('554137730373') // Eurolux Clinic
 
@@ -59,11 +65,12 @@ export const ORTOHAUER_NAME = 'OrtoHauer - Curitiba'
 export const ORTOHAUER_ADDRESS =
   'Rua Alcino Guanabara, 945 - Hauer, Curitiba PR'
 export const ORTOHAUER_DIRECT_PHONE = '(41) 98861-5954'
+export const ORTOHAUER_DIRECT_PHONE_NUMBER = '+5541988615954'
 
 export const EUROLUX_PHONE = '(41) 3773-0373'
 export const EUROLUX_PHONE_NUMBER = '+554137730373'
-export const ORTOHAUER_PHONE = SECRETARY_PHONE_DISPLAY
-export const ORTOHAUER_PHONE_NUMBER = SECRETARY_PHONE_NUMBER
+export const ORTOHAUER_PHONE = ORTOHAUER_DIRECT_PHONE
+export const ORTOHAUER_PHONE_NUMBER = ORTOHAUER_DIRECT_PHONE_NUMBER
 
 export const DAGOSTINI_NAME = "Clínica D'Agostini - Lapa"
 export const DAGOSTINI_ADDRESS =
