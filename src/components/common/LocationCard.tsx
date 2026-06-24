@@ -7,6 +7,8 @@ export interface LocationCardProps {
   address: string
   phoneDisplay: string
   phoneNumber: string
+  secondaryPhoneDisplay?: string
+  secondaryPhoneNumber?: string
   whatsappUrl?: string
   colorScheme?: 'brand' | 'brand-secondary'
   className?: string
@@ -40,6 +42,8 @@ export default function LocationCard({
   address,
   phoneDisplay,
   phoneNumber,
+  secondaryPhoneDisplay,
+  secondaryPhoneNumber,
   whatsappUrl,
   colorScheme = 'brand',
   className = '',
@@ -66,6 +70,14 @@ export default function LocationCard({
           >
             {phoneDisplay}
           </Link>
+          {secondaryPhoneDisplay && secondaryPhoneNumber && (
+            <Link
+              href={`tel:${secondaryPhoneNumber}`}
+              className="block w-fit text-lg font-semibold text-brand-600 hover:text-brand-700 transition-colors"
+            >
+              {secondaryPhoneDisplay}
+            </Link>
+          )}
           {whatsappUrl && (
             <Link
               href={whatsappUrl}

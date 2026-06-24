@@ -37,12 +37,12 @@ export const WHATSAPP_DOCTOR_URL =
 export const WHATSAPP_ORTOHAUER_URL =
   buildWhatsAppUrl(
     '5541995432742',
-    `Olá, NIKA! Vim pelo site da ${NAME} e gostaria de agendar uma consulta na OrtoHauer - Curitiba.`
+    DEFAULT_WHATSAPP_MESSAGE
   ) // NIKA - Assistência ao Paciente
 export const WHATSAPP_DAGOSTINI_URL =
   buildWhatsAppUrl(
     '5541996767400',
-    `Olá! Vim pelo site da ${NAME} e gostaria de agendar uma consulta na Clínica D'Agostini - Lapa.`
+    DEFAULT_WHATSAPP_MESSAGE
   ) // Dagostini Clinic
 
 // Legacy WhatsApp links (keeping for backward compatibility)

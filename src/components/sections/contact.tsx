@@ -7,6 +7,8 @@ import {
   DAGOSTINI_ADDRESS,
   DAGOSTINI_PHONE,
   DAGOSTINI_PHONE_NUMBER,
+  SECRETARY_PHONE_DISPLAY,
+  SECRETARY_PHONE_NUMBER,
   WHATSAPP_ORTOHAUER_URL,
   WHATSAPP_DAGOSTINI_URL,
   EXPERIENCE_YEARS,
@@ -33,6 +35,8 @@ export default function Contact() {
               address={ORTOHAUER_ADDRESS}
               phoneDisplay={ORTOHAUER_PHONE}
               phoneNumber={ORTOHAUER_PHONE_NUMBER}
+              secondaryPhoneDisplay={SECRETARY_PHONE_DISPLAY}
+              secondaryPhoneNumber={SECRETARY_PHONE_NUMBER}
               whatsappUrl={WHATSAPP_ORTOHAUER_URL}
             />
 
