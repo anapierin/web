@@ -35,7 +35,7 @@ const buildWhatsAppUrl = (phone: string) =>
 export const WHATSAPP_DOCTOR_URL =
   buildWhatsAppUrl('5541991001372') // Doctor's WhatsApp
 export const WHATSAPP_ORTOHAUER_URL =
-  buildWhatsAppUrl('5541984881372') // OrtoHauer Clinic
+  buildWhatsAppUrl('5541995432742') // Scheduling WhatsApp
 export const WHATSAPP_DAGOSTINI_URL =
   buildWhatsAppUrl('5541996767400') // Dagostini Clinic
 export const WHATSAPP_EUROLUX_URL =
@@ -51,8 +51,8 @@ export const WHATSAPP_LAPA_DAGOSTINI_URL = 'https://wa.link/biipul' // Lapa – 
 export const SITE_NAME = 'Dra. Ana Pierin'
 
 // Secretary phone number (we are not going to expose doctor phone number)
-export const SECRETARY_PHONE_DISPLAY = '(41) 98488-1372'
-export const SECRETARY_PHONE_NUMBER = '+5541984881372'
+export const SECRETARY_PHONE_DISPLAY = '(41) 99543-2742'
+export const SECRETARY_PHONE_NUMBER = '+5541995432742'
 
 // Clinic addresses and contact information
 export const ORTOHAUER_NAME = 'OrtoHauer - Curitiba'
