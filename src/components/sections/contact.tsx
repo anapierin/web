@@ -2,12 +2,15 @@ import {
   ORTOHAUER_NAME,
   ORTOHAUER_ADDRESS,
   ORTOHAUER_PHONE,
-  ORTOHAUER_DIRECT_PHONE,
+  ORTOHAUER_PHONE_NUMBER,
   DAGOSTINI_NAME,
   DAGOSTINI_ADDRESS,
-  SECRETARY_PHONE_DISPLAY,
   DAGOSTINI_PHONE,
+  DAGOSTINI_PHONE_NUMBER,
+  SECRETARY_PHONE_DISPLAY,
+  SECRETARY_PHONE_NUMBER,
   WHATSAPP_ORTOHAUER_URL,
+  WHATSAPP_DAGOSTINI_URL,
   EXPERIENCE_YEARS,
 } from '@/lib/constants'
 import { LocationCard, StatCard } from '@/components/common'
@@ -31,16 +34,18 @@ export default function Contact() {
               name={ORTOHAUER_NAME}
               address={ORTOHAUER_ADDRESS}
               phoneDisplay={ORTOHAUER_PHONE}
-              fixedPhoneDisplay={ORTOHAUER_DIRECT_PHONE}
+              phoneNumber={ORTOHAUER_PHONE_NUMBER}
+              secondaryPhoneDisplay={SECRETARY_PHONE_DISPLAY}
+              secondaryPhoneNumber={SECRETARY_PHONE_NUMBER}
               whatsappUrl={WHATSAPP_ORTOHAUER_URL}
             />
 
             <LocationCard
               name={DAGOSTINI_NAME}
               address={DAGOSTINI_ADDRESS}
-              phoneDisplay={SECRETARY_PHONE_DISPLAY}
-              fixedPhoneDisplay={DAGOSTINI_PHONE}
-              whatsappUrl={WHATSAPP_ORTOHAUER_URL}
+              phoneDisplay={DAGOSTINI_PHONE}
+              phoneNumber={DAGOSTINI_PHONE_NUMBER}
+              whatsappUrl={WHATSAPP_DAGOSTINI_URL}
             />
           </div>
 

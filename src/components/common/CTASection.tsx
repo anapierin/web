@@ -12,6 +12,8 @@ export interface CTASectionProps {
   className?: string
 }
 
+const isExternalHref = (href: string) => /^https?:\/\//.test(href)
+
 const defaultIcon = (
   <svg
     className="w-5 h-5"
@@ -38,6 +40,14 @@ export default function CTASection({
   secondaryButtonHref,
   className = '',
 }: CTASectionProps) {
+  const primaryExternalProps = isExternalHref(buttonHref)
+    ? { target: '_blank', rel: 'noopener noreferrer' }
+    : {}
+  const secondaryExternalProps =
+    secondaryButtonHref && isExternalHref(secondaryButtonHref)
+      ? { target: '_blank', rel: 'noopener noreferrer' }
+      : {}
+
   return (
     <div
       className={`bg-brand-50 rounded-2xl p-8 pt-10 md:pt-12 md:p-10 shadow-soft border border-brand-100 text-center ${className}`}
@@ -49,6 +59,7 @@ export default function CTASection({
       <div className="flex flex-col sm:flex-row gap-5 justify-center">
         <Link
           href={buttonHref}
+          {...primaryExternalProps}
           className="btn-primary group flex gap-x-2 justify-center items-center"
         >
           {buttonIcon}
@@ -57,6 +68,7 @@ export default function CTASection({
         {secondaryButtonText && secondaryButtonHref && (
           <Link
             href={secondaryButtonHref}
+            {...secondaryExternalProps}
             className="btn-secondary group flex gap-x-2 justify-center items-center"
           >
             <span>{secondaryButtonText}</span>

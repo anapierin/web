@@ -1,5 +1,5 @@
 import { ServiceCard, ConditionCard, CTASection } from '@/components/common'
-import { WHATSAPP_ORTOHAUER_URL } from '@/lib/constants'
+import { WHATSAPP_ORTOHAUER_EVALUATION_URL } from '@/lib/constants'
 
 const services = [
   {
@@ -80,7 +80,7 @@ export default function Services() {
             title='Pronto para cuidar da sua saúde?'
             subtitle='Agende uma avaliação e receba o tratamento especializado que você merece.'
             buttonText='Agendar Avaliação'
-            buttonHref={WHATSAPP_ORTOHAUER_URL}
+            buttonHref={WHATSAPP_ORTOHAUER_EVALUATION_URL}
           />
         </div>
       </div>

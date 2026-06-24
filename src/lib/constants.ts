@@ -24,22 +24,32 @@ export const INSTAGRAM_URL = 'https://www.instagram.com/anapierin.ortopedia/'
 export const FACEBOOK_URL =
   'https://www.facebook.com/people/Ana-Pierin-Ortopedia-e-Traumatologia/61557170002194/'
 
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  `Olá! Vim pelo site da ${NAME} e gostaria de agendar uma consulta.`
-)
+const DEFAULT_WHATSAPP_MESSAGE = `Olá! Vim pelo site da ${NAME} e gostaria de agendar uma consulta.`
+const EVALUATION_WHATSAPP_MESSAGE = `Olá! Vim pelo site da ${NAME} e gostaria de agendar uma avaliação.`
 
-const buildWhatsAppUrl = (phone: string) =>
-  `https://wa.me/${phone}?text=${WHATSAPP_MESSAGE}`
+const buildWhatsAppUrl = (
+  phone: string,
+  message: string = DEFAULT_WHATSAPP_MESSAGE
+) => `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 
 // WhatsApp links
 export const WHATSAPP_DOCTOR_URL =
   buildWhatsAppUrl('5541991001372') // Doctor's WhatsApp
 export const WHATSAPP_ORTOHAUER_URL =
-  buildWhatsAppUrl('5541984881372') // OrtoHauer Clinic
+  buildWhatsAppUrl(
+    '5541995432742',
+    DEFAULT_WHATSAPP_MESSAGE
+  ) // NIKA - Assistência ao Paciente
+export const WHATSAPP_ORTOHAUER_EVALUATION_URL =
+  buildWhatsAppUrl(
+    '5541995432742',
+    EVALUATION_WHATSAPP_MESSAGE
+  ) // NIKA - Assistência ao Paciente
 export const WHATSAPP_DAGOSTINI_URL =
-  buildWhatsAppUrl('5541996767400') // Dagostini Clinic
-export const WHATSAPP_EUROLUX_URL =
-  buildWhatsAppUrl('554137730373') // Eurolux Clinic
+  buildWhatsAppUrl(
+    '5541996767400',
+    DEFAULT_WHATSAPP_MESSAGE
+  ) // Dagostini Clinic
 
 // Legacy WhatsApp links (keeping for backward compatibility)
 export const WHATSAPP_CANNABIS_URL = 'http://wa.link/5mklj4' // Teleconsulta Cannabis Medicinal
@@ -51,19 +61,18 @@ export const WHATSAPP_LAPA_DAGOSTINI_URL = 'https://wa.link/biipul' // Lapa – 
 export const SITE_NAME = 'Dra. Ana Pierin'
 
 // Secretary phone number (we are not going to expose doctor phone number)
-export const SECRETARY_PHONE_DISPLAY = '(41) 98488-1372'
-export const SECRETARY_PHONE_NUMBER = '+5541984881372'
+export const SECRETARY_PHONE_DISPLAY = '(41) 99543-2742'
+export const SECRETARY_PHONE_NUMBER = '+5541995432742'
 
 // Clinic addresses and contact information
 export const ORTOHAUER_NAME = 'OrtoHauer - Curitiba'
 export const ORTOHAUER_ADDRESS =
   'Rua Alcino Guanabara, 945 - Hauer, Curitiba PR'
 export const ORTOHAUER_DIRECT_PHONE = '(41) 98861-5954'
+export const ORTOHAUER_DIRECT_PHONE_NUMBER = '+5541988615954'
 
-export const EUROLUX_PHONE = '(41) 3773-0373'
-export const EUROLUX_PHONE_NUMBER = '+554137730373'
-export const ORTOHAUER_PHONE = SECRETARY_PHONE_DISPLAY
-export const ORTOHAUER_PHONE_NUMBER = SECRETARY_PHONE_NUMBER
+export const ORTOHAUER_PHONE = ORTOHAUER_DIRECT_PHONE
+export const ORTOHAUER_PHONE_NUMBER = ORTOHAUER_DIRECT_PHONE_NUMBER
 
 export const DAGOSTINI_NAME = "Clínica D'Agostini - Lapa"
 export const DAGOSTINI_ADDRESS =
